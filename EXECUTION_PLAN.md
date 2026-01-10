@@ -117,10 +117,10 @@ Human must complete before agents begin:
 **What:** Enable downloading QR codes as PNG and SVG files.
 
 **Acceptance Criteria:**
-- [ ] "Download PNG" button downloads QR as PNG file
-- [ ] "Download SVG" button downloads QR as SVG file
-- [ ] Downloaded files have descriptive names (e.g., `qr-code-{timestamp}.png`)
-- [ ] Downloads work in Chrome, Firefox, and Safari
+- [x] "Download PNG" button downloads QR as PNG file
+- [x] "Download SVG" button downloads QR as SVG file
+- [x] Downloaded files have descriptive names (e.g., `qr-code-{timestamp}.png`)
+- [x] Downloads work in Chrome, Firefox, and Safari
 
 **Files:**
 - Modify: `components/qr-generator.tsx` — add download buttons and logic

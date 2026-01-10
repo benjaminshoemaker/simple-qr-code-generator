@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import QRCode from "qrcode";
 import { Input } from "@/components/ui/input";
 import { Select } from "@/components/ui/select";
+import { Button } from "@/components/ui/button";
 
 type ErrorCorrectionLevel = "L" | "M" | "Q" | "H";
 
@@ -14,16 +15,18 @@ interface QRGeneratorProps {
 // Create a simple store for the QR data URL
 function createQRStore() {
   let dataUrl = "";
+  let svgString = "";
   const listeners = new Set<() => void>();
 
   return {
-    getSnapshot: () => dataUrl,
+    getSnapshot: () => ({ dataUrl, svgString }),
     subscribe: (listener: () => void) => {
       listeners.add(listener);
       return () => listeners.delete(listener);
     },
-    setDataUrl: (url: string) => {
-      dataUrl = url;
+    setData: (png: string, svg: string) => {
+      dataUrl = png;
+      svgString = svg;
       listeners.forEach((l) => l());
     },
   };
@@ -37,32 +40,41 @@ export function QRGenerator({ className }: QRGeneratorProps) {
   const [size, setSize] = useState(256);
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
-  const qrDataUrl = useSyncExternalStore(qrStore.subscribe, qrStore.getSnapshot, qrStore.getSnapshot);
+  const { dataUrl: qrDataUrl, svgString: qrSvgString } = useSyncExternalStore(
+    qrStore.subscribe,
+    qrStore.getSnapshot,
+    qrStore.getSnapshot
+  );
 
   // Generate QR code when dependencies change
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!url || !canvas) {
-      qrStore.setDataUrl("");
+      qrStore.setData("", "");
       return;
     }
 
     let cancelled = false;
 
-    QRCode.toCanvas(canvas, url, {
+    const options = {
       width: size,
       errorCorrectionLevel: errorCorrection,
       margin: 2,
-    })
-      .then(() => {
+    };
+
+    Promise.all([
+      QRCode.toCanvas(canvas, url, options),
+      QRCode.toString(url, { ...options, type: "svg" as const }),
+    ])
+      .then(([, svgStr]) => {
         if (!cancelled && canvas) {
-          const dataUrl = canvas.toDataURL("image/png");
-          qrStore.setDataUrl(dataUrl);
+          const pngDataUrl = canvas.toDataURL("image/png");
+          qrStore.setData(pngDataUrl, svgStr);
         }
       })
       .catch(() => {
         if (!cancelled) {
-          qrStore.setDataUrl("");
+          qrStore.setData("", "");
         }
       });
 
@@ -70,6 +82,33 @@ export function QRGenerator({ className }: QRGeneratorProps) {
       cancelled = true;
     };
   }, [url, size, errorCorrection]);
+
+  const handleDownloadPNG = () => {
+    if (!qrDataUrl) return;
+
+    const timestamp = new Date().toISOString().slice(0, 10);
+    const link = document.createElement("a");
+    link.href = qrDataUrl;
+    link.download = `qr-code-${timestamp}.png`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  const handleDownloadSVG = () => {
+    if (!qrSvgString) return;
+
+    const timestamp = new Date().toISOString().slice(0, 10);
+    const blob = new Blob([qrSvgString], { type: "image/svg+xml" });
+    const svgUrl = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = svgUrl;
+    link.download = `qr-code-${timestamp}.svg`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(svgUrl);
+  };
 
   return (
     <div className={className}>
@@ -138,7 +177,16 @@ export function QRGenerator({ className }: QRGeneratorProps) {
           )}
         </div>
 
-        {qrDataUrl && <p className="mt-2 text-sm text-gray-500">QR code ready for download</p>}
+        {qrDataUrl && (
+          <div className="mt-4 flex gap-3">
+            <Button onClick={handleDownloadPNG} variant="primary">
+              Download PNG
+            </Button>
+            <Button onClick={handleDownloadSVG} variant="outline">
+              Download SVG
+            </Button>
+          </div>
+        )}
       </div>
     </div>
   );
