@@ -96,11 +96,11 @@ Human must complete before agents begin:
 **What:** Create client-side QR code generator using the `qrcode` library.
 
 **Acceptance Criteria:**
-- [ ] `qrcode` npm package installed
-- [ ] QR generator component accepts URL input
-- [ ] QR code renders in real-time as user types
-- [ ] Error correction level selector works (L, M, Q, H)
-- [ ] Size selector works (128, 256, 512, 1024 pixels)
+- [x] `qrcode` npm package installed
+- [x] QR generator component accepts URL input
+- [x] QR code renders in real-time as user types
+- [x] Error correction level selector works (L, M, Q, H)
+- [x] Size selector works (128, 256, 512, 1024 pixels)
 
 **Files:**
 - Create: `components/qr-generator.tsx` — QR generator component
