@@ -138,11 +138,11 @@ Human must complete before agents begin:
 **What:** Create the homepage with static QR generator and value proposition.
 
 **Acceptance Criteria:**
-- [ ] Hero section with headline "No hostage codes" and subheadline
-- [ ] Static QR generator prominently featured
-- [ ] Brief explanation of free vs. paid tiers
-- [ ] Call-to-action for paid features (links to pricing/signup)
-- [ ] Responsive design works on mobile and desktop
+- [x] Hero section with headline "No hostage codes" and subheadline
+- [x] Static QR generator prominently featured
+- [x] Brief explanation of free vs. paid tiers
+- [x] Call-to-action for paid features (links to pricing/signup)
+- [x] Responsive design works on mobile and desktop
 
 **Files:**
 - Modify: `app/page.tsx` — homepage content
@@ -159,11 +159,11 @@ Human must complete before agents begin:
 **What:** Create pricing page with tier comparison.
 
 **Acceptance Criteria:**
-- [ ] Three tiers displayed: Free, Pro ($5/mo), Business ($15/mo)
-- [ ] Feature comparison table shows what each tier includes
-- [ ] Annual pricing option shown with discount
-- [ ] CTA buttons for each tier (Free: use now, Paid: sign up)
-- [ ] Page accessible at `/pricing`
+- [x] Three tiers displayed: Free, Pro ($5/mo), Business ($15/mo)
+- [x] Feature comparison table shows what each tier includes
+- [x] Annual pricing option shown with discount
+- [x] CTA buttons for each tier (Free: use now, Paid: sign up)
+- [x] Page accessible at `/pricing`
 
 **Files:**
 - Create: `app/(marketing)/pricing/page.tsx` — pricing page
@@ -177,9 +177,9 @@ Human must complete before agents begin:
 ### Phase 1 Checkpoint
 
 **Automated:**
-- [ ] `npm run build` succeeds
-- [ ] `npm run lint` passes
-- [ ] TypeScript compilation has no errors
+- [x] `npm run build` succeeds
+- [x] `npm run lint` passes
+- [x] TypeScript compilation has no errors
 
 **Manual Verification:**
 - [ ] Homepage loads and displays QR generator
