@@ -70,11 +70,11 @@ Human must complete before agents begin:
 **What:** Set up folder structure and base configurations for the application.
 
 **Acceptance Criteria:**
-- [ ] `components/ui/` directory created with button and input components
-- [ ] `lib/` directory created with `utils.ts` (cn helper for Tailwind)
-- [ ] `.env.example` created with placeholder environment variables
-- [ ] `.gitignore` includes `.env.local` and node_modules
-- [ ] ESLint and Prettier configured
+- [x] `components/ui/` directory created with button and input components
+- [x] `lib/` directory created with `utils.ts` (cn helper for Tailwind)
+- [x] `.env.example` created with placeholder environment variables
+- [x] `.gitignore` includes `.env.local` and node_modules
+- [x] ESLint and Prettier configured
 
 **Files:**
 - Create: `components/ui/button.tsx` — reusable button component
