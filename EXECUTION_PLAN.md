@@ -46,11 +46,11 @@ Human must complete before agents begin:
 **What:** Create Next.js 14+ project with TypeScript, Tailwind, and app router.
 
 **Acceptance Criteria:**
-- [ ] Next.js 14+ project created with `create-next-app`
-- [ ] TypeScript configured with strict mode
-- [ ] Tailwind CSS installed and configured
-- [ ] App router structure in place (`app/` directory)
-- [ ] Project runs locally with `npm run dev`
+- [x] Next.js 14+ project created with `create-next-app`
+- [x] TypeScript configured with strict mode
+- [x] Tailwind CSS installed and configured
+- [x] App router structure in place (`app/` directory)
+- [x] Project runs locally with `npm run dev`
 
 **Files:**
 - Create: `package.json` — project dependencies
