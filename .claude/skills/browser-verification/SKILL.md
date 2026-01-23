@@ -53,6 +53,61 @@ Read `.claude/verification-config.json` for:
 
 If config is missing or incomplete, ask the human to run `/configure-verification`.
 
+## Step 1.5: HTTP-First Evaluation
+
+Before launching browser tools, evaluate if the criterion can be satisfied with HTTP.
+This optimization skips browser overhead for criteria that don't require DOM inspection.
+
+### Criteria Eligible for HTTP-First
+
+| Criterion Pattern | HTTP Check | Skip Browser If... |
+|-------------------|------------|-------------------|
+| "Page loads at {url}" | `curl -sf {url}` | HTTP 200 returned |
+| "API returns {status}" | `curl -o /dev/null -w "%{http_code}" {url}` | Status matches |
+| "Endpoint responds with {data}" | `curl -s {url} \| jq/grep` | Data found |
+| "Service health check" | `curl -sf {url}/health` | Health endpoint OK |
+| "Redirect to {url}" | `curl -sI {url} \| grep Location` | Location header matches |
+
+### HTTP-First Execution
+
+```bash
+# Generic page accessibility check
+curl -sf "{devServer.url}{route}" -o /dev/null && echo "HTTP_PASS" || echo "HTTP_FAIL"
+
+# Response content check
+curl -s "{devServer.url}{route}" | grep -q "{expected_text}" && echo "HTTP_PASS" || echo "HTTP_FAIL"
+
+# Status code check
+HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" "{url}")
+[ "$HTTP_CODE" = "{expected}" ] && echo "HTTP_PASS" || echo "HTTP_FAIL"
+```
+
+### Decision Logic
+
+**If HTTP_PASS and criterion does NOT require:**
+- Specific DOM element verification (`selector`, `data-testid`, `visible`)
+- Visual appearance check (`screenshot`, `layout`, `style`)
+- User interaction simulation (`click`, `type`, `hover`)
+- Console log inspection (`console`, `errors`, `warnings`)
+- Network timing analysis (`performance`, `timing`)
+
+**Then:**
+- Mark criterion as PASS
+- Skip browser verification entirely
+- Note method as "HTTP-first" in evidence
+- Log: "Verified via HTTP (browser tools not required)"
+
+**Otherwise:**
+- Continue to Step 2 (browser tool selection)
+- HTTP result can inform browser verification (e.g., server is reachable)
+
+### HTTP-First Benefits
+
+- **Speed:** curl is ~10x faster than browser launch
+- **Reliability:** No browser MCP dependency issues
+- **Simplicity:** Works even if no browser tools configured
+- **Resources:** Lower memory and CPU usage
+
 ## Step 2: Tool Selection (Automatic with Fallback)
 
 Automatically detect and use the best available browser tool. Try tools in

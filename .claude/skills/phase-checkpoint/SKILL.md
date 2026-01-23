@@ -1,4 +1,5 @@
 ---
+name: phase-checkpoint
 description: Run checkpoint criteria after completing a phase
 argument-hint: [phase-number]
 allowed-tools: Bash, Read, Edit, Glob, Grep, AskUserQuestion
@@ -23,6 +24,10 @@ Determine working context:
 Before starting, confirm `EXECUTION_PLAN.md` exists in the current working directory.
 
 - If it does not exist, **STOP** and tell the user to `cd` into their project/feature directory (the one containing `EXECUTION_PLAN.md`) and re-run `/phase-checkpoint $1`.
+
+## Context Check
+
+**Before starting:** If context is below 40% remaining, run `/compact` first. This ensures the full command instructions remain in context throughout execution. Compaction mid-command loses procedural instructions.
 
 ## Tool Availability Check
 
@@ -218,6 +223,50 @@ Truly Manual (no automation possible):
 
 **Note:** Only items in "Truly Manual" genuinely require human action. Items in
 "Automation Failed" may be automatable once the underlying issue is fixed.
+
+### Update EXECUTION_PLAN.md Checkboxes (Auto-Verified Items)
+
+After auto-verify passes items, immediately update their checkboxes in EXECUTION_PLAN.md:
+
+1. **For each item that auto-verify marked PASS:**
+   - Read EXECUTION_PLAN.md
+   - Find the "### Phase $1 Checkpoint" section
+   - Locate the exact line: `- [ ] {criterion text}`
+   - Edit: change `- [ ]` to `- [x]`
+   - Verify edit succeeded
+
+2. **Matching rules:**
+   - Match the exact checkbox text (criterion may be truncated in reports)
+   - Use the phase section as anchor to avoid updating wrong items
+   - Skip items already checked (`- [x]`)
+
+### Human Confirmation (Batch)
+
+For items in "Automation Failed" or "Truly Manual" categories, ask human for batch confirmation:
+
+1. **List all items needing human verification:**
+   ```
+   Manual verification needed for {N} items:
+   1. {item 1 text}
+   2. {item 2 text}
+   ...
+   ```
+
+2. **Ask ONE question using AskUserQuestion:**
+   - Question: "Which items have you verified?"
+   - Options:
+     - "All verified" → Update ALL remaining checkboxes at once
+     - "Some verified" → Follow up asking which ones (comma-separated numbers)
+     - "None yet" → Leave all unchecked, continue to next section
+
+3. **Accept natural language responses:**
+   - "they're all good", "verified", "all done" → Treat as "All verified"
+   - "all except 2" or "1 and 3 only" → Update specified items only
+
+4. **Update checkboxes:**
+   - For confirmed items, edit EXECUTION_PLAN.md to change `- [ ]` to `- [x]`
+   - Use a single Edit call when updating multiple items in sequence
+   - Do NOT ask follow-up confirmation questions after user says "all verified"
 
 ### Approach Review (Human)
 
@@ -420,13 +469,13 @@ If `autoAdvance` is not configured, use defaults (`enabled: true`, `delaySeconds
 Auto-advance to `/phase-prep {N+1}` ONLY if ALL of these are true:
 
 1. ✓ All automated checks passed (tests, lint, types, security)
-2. ✓ No manual verification items exist (not just unchecked—none at all)
+2. ✓ No "truly manual" verification items remain (auto-verify was attempted above)
 3. ✓ No production verification items exist
 4. ✓ Phase $1 is not the final phase
 5. ✓ `--pause` flag was NOT passed to this command
 6. ✓ `autoAdvance.enabled` is true (or not configured, defaulting to true)
 
-**Rationale:** Auto-advance is for fully automated workflows. If human intervention was required (manual checks, production verification), the human is already involved and can manually trigger the next phase.
+**Rationale:** Auto-verify (run in Manual Local Verification above) attempts automation before blocking. Only items that genuinely require human judgment block auto-advance. Production verification items always require human presence to confirm deployed behavior.
 
 ### If Auto-Advance Conditions Met
 
@@ -434,7 +483,7 @@ Auto-advance to `/phase-prep {N+1}` ONLY if ALL of these are true:
    ```
    AUTO-ADVANCE
    ============
-   All Phase $1 criteria verified. Preparing next phase...
+   All Phase $1 criteria verified (no truly manual items remain).
 
    Auto-advancing to /phase-prep {N+1} in 15s...
    (Press Enter to pause)
@@ -467,7 +516,7 @@ AUTO-ADVANCE STOPPED
 ====================
 
 Reason: {one of below}
-- Manual verification items exist (human intervention required)
+- Truly manual verification items remain (human judgment required)
 - Production verification items exist (human intervention required)
 - Phase $1 is the final phase
 - Auto-advance disabled via --pause flag
