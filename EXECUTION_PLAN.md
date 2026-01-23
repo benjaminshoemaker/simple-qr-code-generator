@@ -46,11 +46,11 @@ Human must complete before agents begin:
 **What:** Create Next.js 14+ project with TypeScript, Tailwind, and app router.
 
 **Acceptance Criteria:**
-- [ ] Next.js 14+ project created with `create-next-app`
-- [ ] TypeScript configured with strict mode
-- [ ] Tailwind CSS installed and configured
-- [ ] App router structure in place (`app/` directory)
-- [ ] Project runs locally with `npm run dev`
+- [x] Next.js 14+ project created with `create-next-app`
+- [x] TypeScript configured with strict mode
+- [x] Tailwind CSS installed and configured
+- [x] App router structure in place (`app/` directory)
+- [x] Project runs locally with `npm run dev`
 
 **Files:**
 - Create: `package.json` — project dependencies
@@ -70,11 +70,11 @@ Human must complete before agents begin:
 **What:** Set up folder structure and base configurations for the application.
 
 **Acceptance Criteria:**
-- [ ] `components/ui/` directory created with button and input components
-- [ ] `lib/` directory created with `utils.ts` (cn helper for Tailwind)
-- [ ] `.env.example` created with placeholder environment variables
-- [ ] `.gitignore` includes `.env.local` and node_modules
-- [ ] ESLint and Prettier configured
+- [x] `components/ui/` directory created with button and input components
+- [x] `lib/` directory created with `utils.ts` (cn helper for Tailwind)
+- [x] `.env.example` created with placeholder environment variables
+- [x] `.gitignore` includes `.env.local` and node_modules
+- [x] ESLint and Prettier configured
 
 **Files:**
 - Create: `components/ui/button.tsx` — reusable button component
@@ -96,11 +96,11 @@ Human must complete before agents begin:
 **What:** Create client-side QR code generator using the `qrcode` library.
 
 **Acceptance Criteria:**
-- [ ] `qrcode` npm package installed
-- [ ] QR generator component accepts URL input
-- [ ] QR code renders in real-time as user types
-- [ ] Error correction level selector works (L, M, Q, H)
-- [ ] Size selector works (128, 256, 512, 1024 pixels)
+- [x] `qrcode` npm package installed
+- [x] QR generator component accepts URL input
+- [x] QR code renders in real-time as user types
+- [x] Error correction level selector works (L, M, Q, H)
+- [x] Size selector works (128, 256, 512, 1024 pixels)
 
 **Files:**
 - Create: `components/qr-generator.tsx` — QR generator component
@@ -117,10 +117,10 @@ Human must complete before agents begin:
 **What:** Enable downloading QR codes as PNG and SVG files.
 
 **Acceptance Criteria:**
-- [ ] "Download PNG" button downloads QR as PNG file
-- [ ] "Download SVG" button downloads QR as SVG file
-- [ ] Downloaded files have descriptive names (e.g., `qr-code-{timestamp}.png`)
-- [ ] Downloads work in Chrome, Firefox, and Safari
+- [x] "Download PNG" button downloads QR as PNG file
+- [x] "Download SVG" button downloads QR as SVG file
+- [x] Downloaded files have descriptive names (e.g., `qr-code-{timestamp}.png`)
+- [x] Downloads work in Chrome, Firefox, and Safari
 
 **Files:**
 - Modify: `components/qr-generator.tsx` — add download buttons and logic
@@ -138,11 +138,11 @@ Human must complete before agents begin:
 **What:** Create the homepage with static QR generator and value proposition.
 
 **Acceptance Criteria:**
-- [ ] Hero section with headline "No hostage codes" and subheadline
-- [ ] Static QR generator prominently featured
-- [ ] Brief explanation of free vs. paid tiers
-- [ ] Call-to-action for paid features (links to pricing/signup)
-- [ ] Responsive design works on mobile and desktop
+- [x] Hero section with headline "No hostage codes" and subheadline
+- [x] Static QR generator prominently featured
+- [x] Brief explanation of free vs. paid tiers
+- [x] Call-to-action for paid features (links to pricing/signup)
+- [x] Responsive design works on mobile and desktop
 
 **Files:**
 - Modify: `app/page.tsx` — homepage content
@@ -159,11 +159,11 @@ Human must complete before agents begin:
 **What:** Create pricing page with tier comparison.
 
 **Acceptance Criteria:**
-- [ ] Three tiers displayed: Free, Pro ($5/mo), Business ($15/mo)
-- [ ] Feature comparison table shows what each tier includes
-- [ ] Annual pricing option shown with discount
-- [ ] CTA buttons for each tier (Free: use now, Paid: sign up)
-- [ ] Page accessible at `/pricing`
+- [x] Three tiers displayed: Free, Pro ($5/mo), Business ($15/mo)
+- [x] Feature comparison table shows what each tier includes
+- [x] Annual pricing option shown with discount
+- [x] CTA buttons for each tier (Free: use now, Paid: sign up)
+- [x] Page accessible at `/pricing`
 
 **Files:**
 - Create: `app/(marketing)/pricing/page.tsx` — pricing page
@@ -177,9 +177,9 @@ Human must complete before agents begin:
 ### Phase 1 Checkpoint
 
 **Automated:**
-- [ ] `npm run build` succeeds
-- [ ] `npm run lint` passes
-- [ ] TypeScript compilation has no errors
+- [x] `npm run build` succeeds
+- [x] `npm run lint` passes
+- [x] TypeScript compilation has no errors
 
 **Manual Verification:**
 - [ ] Homepage loads and displays QR generator

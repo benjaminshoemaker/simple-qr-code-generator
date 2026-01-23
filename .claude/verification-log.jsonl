@@ -1,0 +1,7 @@
+{"timestamp":"2026-01-22T12:00:00Z","scope":"phase-checkpoint","phase":"1","check":"typecheck","status":"PASS","evidence":".claude/verification/phase-1.md"}
+{"timestamp":"2026-01-22T12:00:01Z","scope":"phase-checkpoint","phase":"1","check":"lint","status":"PASS","evidence":".claude/verification/phase-1.md"}
+{"timestamp":"2026-01-22T12:00:02Z","scope":"phase-checkpoint","phase":"1","check":"build","status":"PASS","evidence":".claude/verification/phase-1.md"}
+{"timestamp":"2026-01-22T12:00:03Z","scope":"phase-checkpoint","phase":"1","check":"dev-server","status":"PASS","evidence":".claude/verification/phase-1.md"}
+{"timestamp":"2026-01-22T12:00:04Z","scope":"phase-checkpoint","phase":"1","check":"security","status":"PASS","evidence":".claude/verification/phase-1.md"}
+{"timestamp":"2026-01-22T12:00:05Z","scope":"phase-checkpoint","phase":"1","check":"browser-local","status":"PASS","evidence":".claude/verification/phase-1.md"}
+{"timestamp":"2026-01-22T12:00:06Z","scope":"phase-checkpoint","phase":"1","check":"bugfix","status":"APPLIED","details":"Fixed useSyncExternalStore infinite loop in qr-generator.tsx"}
