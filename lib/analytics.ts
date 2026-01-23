@@ -1,6 +1,7 @@
 import { db } from "@/lib/db";
 import { qrCodes, scanEvents } from "@/lib/db/schema";
 import { eq, sql } from "drizzle-orm";
+import type { SQL } from "drizzle-orm";
 
 /**
  * Check if the user agent belongs to a known bot/crawler.
@@ -50,4 +51,70 @@ export async function logScanEvent(
     // Log error but don't throw - scan logging should never fail the redirect
     console.error("Failed to log scan event:", error);
   }
+}
+
+const YYYY_MM_DD_REGEX = /^(\d{4})-(\d{2})-(\d{2})$/;
+
+export type AnalyticsDateRange = {
+  from?: Date;
+  toExclusive?: Date;
+};
+
+function parseYYYYMMDDToUTCDate(value: string): Date {
+  const match = YYYY_MM_DD_REGEX.exec(value);
+  if (!match) {
+    throw new Error("Invalid date format. Expected YYYY-MM-DD.");
+  }
+
+  const year = Number(match[1]);
+  const month = Number(match[2]);
+  const day = Number(match[3]);
+
+  const date = new Date(Date.UTC(year, month - 1, day));
+  if (
+    date.getUTCFullYear() !== year ||
+    date.getUTCMonth() !== month - 1 ||
+    date.getUTCDate() !== day
+  ) {
+    throw new Error("Invalid date value.");
+  }
+
+  return date;
+}
+
+export function parseAnalyticsDateRange(
+  fromParam: string | null,
+  toParam: string | null
+): AnalyticsDateRange {
+  const from = fromParam ? parseYYYYMMDDToUTCDate(fromParam) : undefined;
+  const to = toParam ? parseYYYYMMDDToUTCDate(toParam) : undefined;
+
+  if (from && to && from.getTime() > to.getTime()) {
+    throw new Error("Invalid date range. 'from' must be on or before 'to'.");
+  }
+
+  let toExclusive: Date | undefined;
+  if (to) {
+    toExclusive = new Date(to);
+    toExclusive.setUTCDate(toExclusive.getUTCDate() + 1);
+  }
+
+  return { from, toExclusive };
+}
+
+export function buildScanEventsWhereClause(
+  qrCodeId: string,
+  range: AnalyticsDateRange
+): SQL[] {
+  const conditions: SQL[] = [sql`${scanEvents.qrCodeId} = ${qrCodeId}`];
+
+  if (range.from) {
+    conditions.push(sql`${scanEvents.scannedAt} >= ${range.from}`);
+  }
+
+  if (range.toExclusive) {
+    conditions.push(sql`${scanEvents.scannedAt} < ${range.toExclusive}`);
+  }
+
+  return conditions;
 }

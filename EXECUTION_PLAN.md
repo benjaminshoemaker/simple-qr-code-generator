@@ -783,11 +783,11 @@ Human must complete before agents begin:
 **What:** Create API endpoints for QR code analytics.
 
 **Acceptance Criteria:**
-- [ ] `GET /api/qr/[id]/analytics` returns scan data
-- [ ] Response includes: totalScans, scansByDay, scansByCountry
-- [ ] Date range filtering with `from` and `to` query params
-- [ ] Only owner can access analytics
-- [ ] Efficient queries with proper indexes
+- [x] `GET /api/qr/[id]/analytics` returns scan data
+- [x] Response includes: totalScans, scansByDay, scansByCountry
+- [x] Date range filtering with `from` and `to` query params
+- [x] Only owner can access analytics
+- [x] Efficient queries with proper indexes
 
 **Files:**
 - Create: `app/api/qr/[id]/analytics/route.ts` — analytics endpoint

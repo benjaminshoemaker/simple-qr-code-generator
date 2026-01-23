@@ -192,6 +192,7 @@ export const scanEvents = pgTable(
   (table) => [
     index("scan_qr_code_id_idx").on(table.qrCodeId),
     index("scan_scanned_at_idx").on(table.scannedAt),
+    index("scan_qr_code_id_scanned_at_idx").on(table.qrCodeId, table.scannedAt),
   ]
 );
 
