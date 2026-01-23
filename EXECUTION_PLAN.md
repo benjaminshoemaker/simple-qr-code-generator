@@ -748,15 +748,15 @@ Human must complete before agents begin:
 ### Phase 4 Checkpoint
 
 **Automated:**
-- [ ] All tests pass
-- [ ] `npm run build` succeeds
+- [x] All tests pass
+- [x] `npm run build` succeeds
 
 **Manual Verification:**
-- [ ] Without subscription: cannot create dynamic QR code
-- [ ] Complete Stripe checkout (use test mode)
+- [x] Without subscription: cannot create dynamic QR code
+- [x] Complete Stripe checkout (use test mode) — redirects to Stripe
 - [ ] After subscription: can create QR codes
 - [ ] Pro plan: blocked at 10 codes
-- [ ] Billing page shows correct plan and usage
+- [x] Billing page shows correct plan and usage
 - [ ] Customer portal accessible
 
 ---

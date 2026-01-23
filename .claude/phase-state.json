@@ -4,7 +4,7 @@
   "currentPhase": {
     "number": 4,
     "name": "Billing",
-    "status": "COMPLETE"
+    "status": "CHECKPOINT_PENDING"
   },
   "progress": {
     "totalPhases": 5,
@@ -12,7 +12,7 @@
       { "number": 1, "name": "Foundation", "completed": 41, "total": 41, "status": "CHECKPOINTED" },
       { "number": 2, "name": "Authentication & Database", "completed": 56, "total": 56, "status": "COMPLETE" },
       { "number": 3, "name": "Dynamic QR Core", "completed": 63, "total": 63, "status": "CHECKPOINTED" },
-      { "number": 4, "name": "Billing", "completed": 35, "total": 35, "status": "COMPLETE", "started_at": "2026-01-23T05:00:00Z", "completed_at": "2026-01-23T08:40:00Z" },
+      { "number": 4, "name": "Billing", "completed": 35, "total": 35, "status": "CHECKPOINT_PENDING", "started_at": "2026-01-23T05:00:00Z", "completed_at": "2026-01-23T08:40:00Z" },
       { "number": 5, "name": "Analytics & Polish", "completed": 0, "total": 48, "status": "pending" }
     ],
     "overall": {
@@ -32,5 +32,24 @@
     "4.2.A": { "status": "COMPLETE", "completed_at": "2026-01-23T06:30:00Z" },
     "4.2.B": { "status": "COMPLETE", "completed_at": "2026-01-23T08:40:00Z" }
   },
-  "lastUpdated": "2026-01-23T08:40:00Z"
+  "checkpoint": {
+    "phase": 4,
+    "automated": {
+      "typecheck": "PASSED",
+      "lint": "PASSED",
+      "build": "PASSED"
+    },
+    "browserVerification": {
+      "billing_page_renders": "VERIFIED",
+      "subscription_required_403": "VERIFIED",
+      "stripe_checkout_redirect": "VERIFIED"
+    },
+    "manualRequired": [
+      "Complete Stripe checkout with test card (4242 4242 4242 4242)",
+      "Verify subscription creates QR code permissions",
+      "Test Pro plan 10-code limit",
+      "Test Customer Portal access via Manage Subscription button"
+    ]
+  },
+  "lastUpdated": "2026-01-23T09:00:00Z"
 }
