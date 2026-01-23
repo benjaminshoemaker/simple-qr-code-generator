@@ -753,11 +753,11 @@ Human must complete before agents begin:
 
 **Manual Verification:**
 - [x] Without subscription: cannot create dynamic QR code
-- [x] Complete Stripe checkout (use test mode) — redirects to Stripe
-- [ ] After subscription: can create QR codes
-- [ ] Pro plan: blocked at 10 codes
+- [x] Complete Stripe checkout (use test mode)
+- [x] After subscription: can create QR codes
+- [x] Pro plan: blocked at 10 codes
 - [x] Billing page shows correct plan and usage
-- [ ] Customer portal accessible
+- [x] Customer portal accessible
 
 ---
 
