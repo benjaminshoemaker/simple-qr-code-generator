@@ -5,6 +5,12 @@ allowed-tools: Read, Grep
 
 Read EXECUTION_PLAN.md and show the current execution status.
 
+## Directory Guard (Wrong Directory Check)
+
+Before starting, confirm `EXECUTION_PLAN.md` exists in the current working directory.
+
+- If it does not exist, **STOP** and tell the user to `cd` into their project directory (the one containing `EXECUTION_PLAN.md`) and re-run `/progress`.
+
 ## Progress Report
 
 1. **Overview**
