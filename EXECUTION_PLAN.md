@@ -235,13 +235,13 @@ Human must complete before agents begin:
 **What:** Define all database tables using Drizzle schema.
 
 **Acceptance Criteria:**
-- [ ] `users` table schema defined with all fields from spec
-- [ ] `subscriptions` table schema defined
-- [ ] `qrCodes` table schema defined with indexes
-- [ ] `folders` table schema defined
-- [ ] `tags` and `qrCodeTags` junction table defined
-- [ ] `scanEvents` table schema defined with indexes
-- [ ] Migration generated and applied successfully
+- [x] `users` table schema defined with all fields from spec
+- [x] `subscriptions` table schema defined
+- [x] `qrCodes` table schema defined with indexes
+- [x] `folders` table schema defined
+- [x] `tags` and `qrCodeTags` junction table defined
+- [x] `scanEvents` table schema defined with indexes
+- [x] Migration generated and applied successfully
 
 **Files:**
 - Create: `lib/db/schema.ts` — all table definitions
