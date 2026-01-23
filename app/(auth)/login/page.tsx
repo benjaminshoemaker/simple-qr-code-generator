@@ -1,13 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import { signIn } from "next-auth/react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
-export default function LoginPage() {
+function LoginForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const callbackUrl = searchParams.get("callbackUrl") || "/dashboard";
@@ -169,4 +169,25 @@ function getErrorMessage(error: string | null): string {
     default:
       return "An error occurred during sign in";
   }
+}
+
+export default function LoginPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="w-full max-w-md">
+          <div className="bg-white rounded-lg shadow-md p-8 animate-pulse">
+            <div className="h-8 bg-gray-200 rounded w-3/4 mx-auto mb-6" />
+            <div className="space-y-4">
+              <div className="h-10 bg-gray-200 rounded" />
+              <div className="h-10 bg-gray-200 rounded" />
+              <div className="h-10 bg-gray-200 rounded" />
+            </div>
+          </div>
+        </div>
+      }
+    >
+      <LoginForm />
+    </Suspense>
+  );
 }

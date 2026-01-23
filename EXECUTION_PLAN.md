@@ -369,11 +369,11 @@ Human must complete before agents begin:
 **What:** Create authenticated layout that redirects unauthenticated users.
 
 **Acceptance Criteria:**
-- [ ] Dashboard layout checks for session
-- [ ] Unauthenticated users redirected to `/login`
-- [ ] Layout includes navigation sidebar
-- [ ] User email displayed in header
-- [ ] Logout button works
+- [x] Dashboard layout checks for session
+- [x] Unauthenticated users redirected to `/login`
+- [x] Layout includes navigation sidebar
+- [x] User email displayed in header
+- [x] Logout button works
 
 **Files:**
 - Create: `app/(dashboard)/layout.tsx` — protected dashboard layout
@@ -388,9 +388,9 @@ Human must complete before agents begin:
 ### Phase 2 Checkpoint
 
 **Automated:**
-- [ ] All tests pass
-- [ ] `npm run build` succeeds
-- [ ] Database migrations applied
+- [x] All tests pass
+- [x] `npm run build` succeeds
+- [x] Database migrations applied
 
 **Manual Verification:**
 - [ ] Sign up with email/password — user created in database
