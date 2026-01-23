@@ -5,6 +5,11 @@ import { db } from "@/lib/db";
 import { qrCodes } from "@/lib/db/schema";
 import { eq, desc, and, sql } from "drizzle-orm";
 import { generateUniqueShortCode, buildShortUrl, isValidUrl } from "@/lib/qr";
+import {
+  requireSubscription,
+  checkQrLimit,
+  SubscriptionError,
+} from "@/lib/subscription";
 
 // Request body schema for creating a QR code
 const createQrSchema = z.object({
@@ -85,6 +90,33 @@ export async function POST(request: NextRequest) {
 
   if (!session?.user?.id) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
+  // Check subscription status
+  let subscription;
+  try {
+    subscription = await requireSubscription(session.user.id);
+  } catch (error) {
+    if (error instanceof SubscriptionError) {
+      return NextResponse.json(
+        { error: error.message, code: error.code },
+        { status: 403 }
+      );
+    }
+    throw error;
+  }
+
+  // Check QR code limit for the plan
+  try {
+    await checkQrLimit(session.user.id, subscription.plan);
+  } catch (error) {
+    if (error instanceof SubscriptionError) {
+      return NextResponse.json(
+        { error: error.message, code: error.code },
+        { status: 403 }
+      );
+    }
+    throw error;
   }
 
   let body;

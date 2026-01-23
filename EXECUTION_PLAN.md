@@ -708,11 +708,11 @@ Human must complete before agents begin:
 **What:** Enforce subscription requirements on dynamic QR endpoints.
 
 **Acceptance Criteria:**
-- [ ] `requireSubscription` helper checks for active subscription
-- [ ] `checkQrLimit` enforces Pro plan 10-code limit
-- [ ] `POST /api/qr` returns 403 if no subscription
-- [ ] `POST /api/qr` returns 403 if Pro limit reached
-- [ ] Business plan has no limit
+- [x] `requireSubscription` helper checks for active subscription
+- [x] `checkQrLimit` enforces Pro plan 10-code limit
+- [x] `POST /api/qr` returns 403 if no subscription
+- [x] `POST /api/qr` returns 403 if Pro limit reached
+- [x] Business plan has no limit
 
 **Files:**
 - Create: `lib/subscription.ts` — subscription helpers
