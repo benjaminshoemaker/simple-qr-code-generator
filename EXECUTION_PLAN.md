@@ -304,10 +304,10 @@ Human must complete before agents begin:
 **What:** Add Google provider for OAuth authentication.
 
 **Acceptance Criteria:**
-- [ ] GoogleProvider configured in NextAuth
-- [ ] Google login creates user in database if not exists
-- [ ] Google login links to existing account by email
-- [ ] OAuth tokens stored via Drizzle adapter
+- [x] GoogleProvider configured in NextAuth
+- [x] Google login creates user in database if not exists
+- [x] Google login links to existing account by email
+- [x] OAuth tokens stored via Drizzle adapter
 
 **Files:**
 - Modify: `lib/auth.ts` — add GoogleProvider
