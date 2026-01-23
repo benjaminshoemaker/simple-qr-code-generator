@@ -729,11 +729,11 @@ Human must complete before agents begin:
 **What:** Create billing page for subscription management.
 
 **Acceptance Criteria:**
-- [ ] Billing page at `/billing` shows current plan
-- [ ] Non-subscribers see upgrade prompts with plan options
-- [ ] Subscribers see plan details and usage (X of 10 codes for Pro)
-- [ ] "Manage Subscription" links to Stripe customer portal
-- [ ] Cancel flow works via Stripe portal
+- [x] Billing page at `/billing` shows current plan
+- [x] Non-subscribers see upgrade prompts with plan options
+- [x] Subscribers see plan details and usage (X of 10 codes for Pro)
+- [x] "Manage Subscription" links to Stripe customer portal
+- [x] Cancel flow works via Stripe portal
 
 **Files:**
 - Create: `app/(dashboard)/billing/page.tsx` — billing page
