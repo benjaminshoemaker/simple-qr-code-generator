@@ -6,11 +6,31 @@ allowed-tools: Read, Write, Edit, Bash, Glob, Grep, Task
 
 Execute all steps and tasks in Phase $1 from EXECUTION_PLAN.md.
 
+## Context Detection
+
+Determine working context:
+
+1. If current working directory matches pattern `*/features/*`:
+   - PROJECT_ROOT = parent of parent of CWD (e.g., `/project/features/foo` → `/project`)
+   - MODE = "feature"
+
+2. Otherwise:
+   - PROJECT_ROOT = current working directory
+   - MODE = "greenfield"
+
 ## Context
 
 Before starting, read these files:
-- **AGENTS.md** — Follow all workflow conventions
-- **EXECUTION_PLAN.md** — Task definitions and acceptance criteria
+- **PROJECT_ROOT/AGENTS.md** — Follow all workflow conventions
+- **EXECUTION_PLAN.md** — Task definitions and acceptance criteria (from CWD)
+
+## Directory Guard (Wrong Directory Check)
+
+Before starting, confirm the required files exist:
+- `EXECUTION_PLAN.md` exists in the current working directory
+- `PROJECT_ROOT/AGENTS.md` exists
+
+- If either is missing, **STOP** and tell the user to `cd` into their project/feature directory (the one containing `EXECUTION_PLAN.md`) and re-run `/phase-start $1`.
 
 ## Execution Rules
 
@@ -32,7 +52,22 @@ Before starting, read these files:
    ```bash
    # Commit any dirty files first (preserves user work)
    git add -A && git diff --cached --quiet || git commit -m "wip: uncommitted changes before phase-$1"
+   ```
 
+   **Check for unpushed commits before branching:**
+   ```bash
+   # Get current branch and check if ahead of remote
+   CURRENT_BRANCH=$(git branch --show-current)
+   UNPUSHED=$(git rev-list --count @{upstream}..HEAD 2>/dev/null || echo "no-upstream")
+   ```
+
+   - If `UNPUSHED` is a number > 0:
+     - Ask: "You have {UNPUSHED} unpushed commit(s) on `{CURRENT_BRANCH}`. Push before creating phase branch? (recommended)"
+     - If yes: `git push`
+     - If no: Continue (user accepts branching from unpushed state)
+   - If `UNPUSHED` is "no-upstream" or 0: Continue without prompting
+
+   ```bash
    # Create phase branch from current HEAD
    git checkout -b phase-$1
    ```
@@ -55,8 +90,13 @@ Before starting, read these files:
 
 2. **Task Execution** (for each task)
    - Read the task definition and acceptance criteria
+   - **Explore before implementing:**
+     - Search for similar existing functionality (don't duplicate)
+     - Identify patterns used elsewhere in codebase
+     - List reusable utilities/components to leverage
+     - Note conventions (naming, error handling, structure)
    - Write tests first (one per acceptance criterion)
-   - Implement minimum code to pass tests
+   - Implement minimum code to pass tests, following discovered patterns
    - Run verification using /verify-task
    - Update checkboxes in EXECUTION_PLAN.md: `- [ ]` → `- [x]`
    - **Commit immediately** (see Git Workflow above)
@@ -107,6 +147,70 @@ Before starting, read these files:
 5. **Context Hygiene**
    - Summarize progress between steps if context grows large
 
+## State Tracking
+
+Maintain `.claude/phase-state.json` throughout execution:
+
+1. **At phase start**, update state:
+   ```bash
+   mkdir -p .claude
+   ```
+
+   Set phase status to `IN_PROGRESS` with `started_at` timestamp.
+
+2. **After each task completion**, update the task entry:
+   ```json
+   {
+     "tasks": {
+       "{task_id}": {
+         "status": "COMPLETE",
+         "completed_at": "{ISO timestamp}"
+       }
+     }
+   }
+   ```
+
+3. **If task is blocked**, record the blocker:
+   ```json
+   {
+     "tasks": {
+       "{task_id}": {
+         "status": "BLOCKED",
+         "blocker": "{description}",
+         "blocker_type": "user-action|dependency|external-service|unclear-requirements",
+         "since": "{ISO timestamp}"
+       }
+     }
+   }
+   ```
+
+4. **State file format** (create if missing):
+   ```json
+   {
+     "schema_version": "1.0",
+     "project_name": "{directory name}",
+     "last_updated": "{ISO timestamp}",
+     "main": {
+       "current_phase": 1,
+       "total_phases": 6,
+       "status": "IN_PROGRESS",
+       "phases": [
+         {
+           "number": 1,
+           "name": "{Phase Name}",
+           "status": "IN_PROGRESS",
+           "started_at": "{ISO timestamp}",
+           "tasks": {}
+         }
+       ]
+     }
+   }
+   ```
+
+If `.claude/phase-state.json` doesn't exist, run `/populate-state` first to initialize it.
+
+---
+
 ## Completion
 
 Do not check back until Phase $1 is complete, unless blocked or stuck.
@@ -119,3 +223,84 @@ When done, provide:
 - Ready for /phase-checkpoint $1
 
 **Note:** Branches are not pushed automatically. After `/phase-checkpoint` passes, the human will review and push.
+
+---
+
+## Auto-Advance (After Phase Completes)
+
+Check if auto-advance is enabled and this phase completes with no manual items.
+
+### Configuration Check
+
+Read `.claude/settings.local.json` for auto-advance configuration:
+
+```json
+{
+  "autoAdvance": {
+    "enabled": true,      // default: true
+    "delaySeconds": 15    // default: 15
+  }
+}
+```
+
+If `autoAdvance` is not configured, use defaults (`enabled: true`, `delaySeconds: 15`).
+
+### Auto-Advance Conditions
+
+Auto-advance to `/phase-checkpoint $1` ONLY if ALL of these are true:
+
+1. ✓ All tasks in Phase $1 are complete
+2. ✓ The "Phase $1 Checkpoint" section in EXECUTION_PLAN.md has ZERO manual verification items
+3. ✓ No tasks were marked as blocked or skipped
+4. ✓ `--pause` flag was NOT passed to this command
+5. ✓ `autoAdvance.enabled` is true (or not configured, defaulting to true)
+
+**Rationale:** If the checkpoint has manual verification items, human intervention is required anyway. The human should trigger `/phase-checkpoint` after they're ready to verify.
+
+### If Auto-Advance Conditions Met
+
+1. **Show countdown:**
+   ```
+   AUTO-ADVANCE
+   ============
+   All Phase $1 tasks complete. No manual verification items.
+
+   Auto-advancing to /phase-checkpoint $1 in 15s...
+   (Press Enter to pause)
+   ```
+
+2. **Wait for delay or interrupt:**
+   - Wait `autoAdvance.delaySeconds` (default 15)
+   - If user presses Enter during countdown, cancel auto-advance
+   - Show countdown updates: `14s... 13s... 12s...`
+
+3. **If not interrupted:**
+   - Track this command in auto-advance session log
+   - Execute `/phase-checkpoint $1`
+   - Checkpoint will continue the chain if it passes
+
+4. **If interrupted:**
+   ```
+   Auto-advance paused by user.
+   Run manually when ready:
+     /phase-checkpoint $1
+   ```
+
+### If Auto-Advance Conditions NOT Met
+
+Stop and report why:
+
+```
+PHASE $1 COMPLETE
+=================
+All tasks finished.
+
+Cannot auto-advance because:
+- {reason: e.g., "Phase has manual verification items"}
+
+Manual items requiring human verification:
+- [ ] {item 1}
+- [ ] {item 2}
+
+Next: Run /phase-checkpoint $1 when ready to verify
+```
