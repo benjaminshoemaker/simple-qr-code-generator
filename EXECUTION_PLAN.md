@@ -325,12 +325,12 @@ Human must complete before agents begin:
 **What:** Create login page with email/password and Google OAuth.
 
 **Acceptance Criteria:**
-- [ ] Login form with email and password fields
-- [ ] "Sign in with Google" button
-- [ ] Form validation with error messages
-- [ ] Redirect to dashboard on successful login
-- [ ] Link to signup page
-- [ ] Page accessible at `/login`
+- [x] Login form with email and password fields
+- [x] "Sign in with Google" button
+- [x] Form validation with error messages
+- [x] Redirect to dashboard on successful login
+- [x] Link to signup page
+- [x] Page accessible at `/login`
 
 **Files:**
 - Create: `app/(auth)/login/page.tsx` — login page
