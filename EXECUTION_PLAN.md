@@ -347,12 +347,12 @@ Human must complete before agents begin:
 **What:** Create signup page with email/password and Google OAuth.
 
 **Acceptance Criteria:**
-- [ ] Signup form with email, password, and confirm password fields
-- [ ] "Sign up with Google" button
-- [ ] Form validation (email format, password strength, password match)
-- [ ] Redirect to dashboard on successful signup
-- [ ] Link to login page
-- [ ] Page accessible at `/signup`
+- [x] Signup form with email, password, and confirm password fields
+- [x] "Sign up with Google" button
+- [x] Form validation (email format, password strength, password match)
+- [x] Redirect to dashboard on successful signup
+- [x] Link to login page
+- [x] Page accessible at `/signup`
 
 **Files:**
 - Create: `app/(auth)/signup/page.tsx` — signup page
