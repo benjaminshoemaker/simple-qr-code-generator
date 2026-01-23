@@ -663,11 +663,11 @@ Human must complete before agents begin:
 **What:** Configure Stripe SDK and create checkout session endpoint.
 
 **Acceptance Criteria:**
-- [ ] `stripe` npm package installed
-- [ ] Stripe client configured in `lib/stripe.ts`
-- [ ] `POST /api/stripe/checkout` creates checkout session
-- [ ] Checkout redirects to Stripe payment page
-- [ ] Success and cancel URLs configured
+- [x] `stripe` npm package installed
+- [x] Stripe client configured in `lib/stripe.ts`
+- [x] `POST /api/stripe/checkout` creates checkout session
+- [x] Checkout redirects to Stripe payment page
+- [x] Success and cancel URLs configured
 
 **Files:**
 - Create: `lib/stripe.ts` — Stripe client and helpers
