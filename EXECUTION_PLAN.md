@@ -409,8 +409,8 @@ Human must complete before agents begin:
 
 Human must complete before agents begin:
 
-- [ ] Decide on short URL domain (e.g., simpleqr.com/go/ or separate subdomain)
-- [ ] No additional setup required
+- [x] Decide on short URL domain (e.g., simpleqr.com/go/ or separate subdomain)
+- [x] No additional setup required
 
 ---
 
@@ -421,12 +421,12 @@ Human must complete before agents begin:
 **What:** Implement API endpoints for creating and listing QR codes.
 
 **Acceptance Criteria:**
-- [ ] `POST /api/qr` creates a new QR code
-- [ ] Short code generated as random 8-character alphanumeric
-- [ ] Destination URL validated (must be valid URL)
-- [ ] `GET /api/qr` lists user's QR codes with pagination
-- [ ] Response includes short URL (e.g., `{domain}/go/{code}`)
-- [ ] Only authenticated users can access endpoints
+- [x] `POST /api/qr` creates a new QR code
+- [x] Short code generated as random 8-character alphanumeric
+- [x] Destination URL validated (must be valid URL)
+- [x] `GET /api/qr` lists user's QR codes with pagination
+- [x] Response includes short URL (e.g., `{domain}/go/{code}`)
+- [x] Only authenticated users can access endpoints
 
 **Files:**
 - Create: `app/api/qr/route.ts` — create and list endpoints
@@ -443,11 +443,11 @@ Human must complete before agents begin:
 **What:** Implement API endpoints for updating and deleting QR codes.
 
 **Acceptance Criteria:**
-- [ ] `PATCH /api/qr/[id]` updates destination URL, name, folder, isActive
-- [ ] `DELETE /api/qr/[id]` removes QR code
-- [ ] Only owner can update/delete (403 for non-owners)
-- [ ] 404 returned for non-existent codes
-- [ ] Zod validation for request bodies
+- [x] `PATCH /api/qr/[id]` updates destination URL, name, folder, isActive
+- [x] `DELETE /api/qr/[id]` removes QR code
+- [x] Only owner can update/delete (403 for non-owners)
+- [x] 404 returned for non-existent codes
+- [x] Zod validation for request bodies
 
 **Files:**
 - Create: `app/api/qr/[id]/route.ts` — update and delete endpoints
@@ -465,12 +465,12 @@ Human must complete before agents begin:
 **What:** Create edge function that handles QR code redirects.
 
 **Acceptance Criteria:**
-- [ ] `GET /go/[code]` redirects to destination URL
-- [ ] Response is 302 redirect with Location header
-- [ ] Lookup uses database query
-- [ ] 404 page shown for non-existent codes
-- [ ] 410 page shown for deactivated codes (isActive=false)
-- [ ] Function configured for edge runtime
+- [x] `GET /go/[code]` redirects to destination URL
+- [x] Response is 302 redirect with Location header
+- [x] Lookup uses database query
+- [x] 404 page shown for non-existent codes
+- [x] 410 page shown for deactivated codes (isActive=false)
+- [x] Function configured for edge runtime
 
 **Files:**
 - Create: `app/go/[code]/route.ts` — edge redirect function
@@ -488,12 +488,12 @@ Human must complete before agents begin:
 **What:** Log scan events asynchronously when QR codes are scanned.
 
 **Acceptance Criteria:**
-- [ ] Scan event logged with timestamp, country, and IP hash
-- [ ] Country extracted from Vercel `request.geo`
-- [ ] IP hashed with SHA-256 (not stored raw)
-- [ ] Logging is async (does not block redirect)
-- [ ] `scanCount` incremented on QR code record
-- [ ] Bot user agents filtered out (not logged)
+- [x] Scan event logged with timestamp, country, and IP hash
+- [x] Country extracted from Vercel `request.geo`
+- [x] IP hashed with SHA-256 (not stored raw)
+- [x] Logging is async (does not block redirect)
+- [x] `scanCount` incremented on QR code record
+- [x] Bot user agents filtered out (not logged)
 
 **Files:**
 - Modify: `app/go/[code]/route.ts` — add scan logging
@@ -512,12 +512,12 @@ Human must complete before agents begin:
 **What:** Create dashboard page showing user's QR codes.
 
 **Acceptance Criteria:**
-- [ ] Dashboard page at `/dashboard` lists all QR codes
-- [ ] Each QR code shows: name, short URL, destination, scan count
-- [ ] "Create New" button opens creation flow
-- [ ] QR codes sortable by date created, scan count
-- [ ] Pagination works for users with many codes
-- [ ] Empty state shown when no codes exist
+- [x] Dashboard page at `/dashboard` lists all QR codes
+- [x] Each QR code shows: name, short URL, destination, scan count
+- [x] "Create New" button opens creation flow
+- [x] QR codes sortable by date created, scan count
+- [x] Pagination works for users with many codes
+- [x] Empty state shown when no codes exist
 
 **Files:**
 - Create: `app/(dashboard)/dashboard/page.tsx` — QR list page
@@ -534,13 +534,13 @@ Human must complete before agents begin:
 **What:** Create modal or page for creating new dynamic QR codes.
 
 **Acceptance Criteria:**
-- [ ] Form with destination URL input (required)
-- [ ] Optional name field
-- [ ] Optional folder selector
-- [ ] URL validation before submission
-- [ ] QR code preview shown after creation
-- [ ] Download buttons for PNG/SVG
-- [ ] Short URL displayed and copyable
+- [x] Form with destination URL input (required)
+- [x] Optional name field
+- [x] Optional folder selector
+- [x] URL validation before submission
+- [x] QR code preview shown after creation
+- [x] Download buttons for PNG/SVG
+- [x] Short URL displayed and copyable
 
 **Files:**
 - Create: `components/qr-create-modal.tsx` — QR creation modal
@@ -557,12 +557,12 @@ Human must complete before agents begin:
 **What:** Create page for viewing and editing a single QR code.
 
 **Acceptance Criteria:**
-- [ ] Page at `/qr/[id]` shows QR code details
-- [ ] Editable fields: destination URL, name, folder
-- [ ] QR code image displayed with download options
-- [ ] Toggle for active/inactive status
-- [ ] Delete button with confirmation
-- [ ] Changes saved via API
+- [x] Page at `/qr/[id]` shows QR code details
+- [x] Editable fields: destination URL, name, folder
+- [x] QR code image displayed with download options
+- [x] Toggle for active/inactive status
+- [x] Delete button with confirmation
+- [x] Changes saved via API
 
 **Files:**
 - Create: `app/(dashboard)/qr/[id]/page.tsx` — QR detail page
@@ -580,11 +580,11 @@ Human must complete before agents begin:
 **What:** Add folder management for organizing QR codes.
 
 **Acceptance Criteria:**
-- [ ] `POST /api/folders` creates a folder
-- [ ] `GET /api/folders` lists folders with QR count
-- [ ] `DELETE /api/folders/[id]` removes folder (moves QR codes to no-folder)
-- [ ] Dashboard can filter by folder
-- [ ] Folder selector in QR creation/edit
+- [x] `POST /api/folders` creates a folder
+- [x] `GET /api/folders` lists folders with QR count
+- [x] `DELETE /api/folders/[id]` removes folder (moves QR codes to no-folder)
+- [x] Dashboard can filter by folder
+- [x] Folder selector in QR creation/edit
 
 **Files:**
 - Create: `app/api/folders/route.ts` — folder endpoints
@@ -603,12 +603,12 @@ Human must complete before agents begin:
 **What:** Add tagging system for QR codes.
 
 **Acceptance Criteria:**
-- [ ] `POST /api/tags` creates a tag
-- [ ] `GET /api/tags` lists user's tags
-- [ ] `POST /api/qr/[id]/tags` adds tag to QR code
-- [ ] `DELETE /api/qr/[id]/tags/[tagId]` removes tag
-- [ ] Tags displayed on QR cards
-- [ ] Tag selector in QR edit view
+- [x] `POST /api/tags` creates a tag
+- [x] `GET /api/tags` lists user's tags
+- [x] `POST /api/qr/[id]/tags` adds tag to QR code
+- [x] `DELETE /api/qr/[id]/tags/[tagId]` removes tag
+- [x] Tags displayed on QR cards
+- [x] Tag selector in QR edit view
 
 **Files:**
 - Create: `app/api/tags/route.ts` — tag endpoints
@@ -626,8 +626,8 @@ Human must complete before agents begin:
 ### Phase 3 Checkpoint
 
 **Automated:**
-- [ ] All tests pass
-- [ ] `npm run build` succeeds
+- [x] All tests pass
+- [x] `npm run build` succeeds
 
 **Manual Verification:**
 - [ ] Create a QR code — appears in dashboard
