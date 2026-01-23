@@ -14,20 +14,21 @@ interface QRGeneratorProps {
 
 // Create a simple store for the QR data URL
 function createQRStore() {
-  let dataUrl = "";
-  let svgString = "";
+  let snapshot = { dataUrl: "", svgString: "" };
   const listeners = new Set<() => void>();
 
   return {
-    getSnapshot: () => ({ dataUrl, svgString }),
+    getSnapshot: () => snapshot,
     subscribe: (listener: () => void) => {
       listeners.add(listener);
       return () => listeners.delete(listener);
     },
     setData: (png: string, svg: string) => {
-      dataUrl = png;
-      svgString = svg;
-      listeners.forEach((l) => l());
+      // Only create a new snapshot object if values changed
+      if (snapshot.dataUrl !== png || snapshot.svgString !== svg) {
+        snapshot = { dataUrl: png, svgString: svg };
+        listeners.forEach((l) => l());
+      }
     },
   };
 }

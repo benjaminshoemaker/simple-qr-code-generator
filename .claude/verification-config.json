@@ -1,0 +1,22 @@
+{
+  "version": "1.0",
+  "projectRoot": "/Users/coding/Projects/simple-qr-code-generator",
+  "commands": {
+    "test": "",
+    "lint": "npm run lint",
+    "typecheck": "npx tsc --noEmit",
+    "build": "npm run build",
+    "coverage": ""
+  },
+  "devServer": {
+    "command": "npm run dev",
+    "url": "http://localhost:3000",
+    "startupSeconds": 5
+  },
+  "browser": {
+    "tool": "auto"
+  },
+  "auth": {
+    "strategy": "none"
+  }
+}
