@@ -685,12 +685,12 @@ Human must complete before agents begin:
 **What:** Handle Stripe webhook events for subscription lifecycle.
 
 **Acceptance Criteria:**
-- [ ] `POST /api/stripe/webhook` receives Stripe events
-- [ ] Webhook signature verified
-- [ ] `checkout.session.completed` creates subscription record
-- [ ] `customer.subscription.updated` updates subscription status
-- [ ] `customer.subscription.deleted` marks subscription canceled
-- [ ] `invoice.payment_failed` updates status to past_due
+- [x] `POST /api/stripe/webhook` receives Stripe events
+- [x] Webhook signature verified
+- [x] `checkout.session.completed` creates subscription record
+- [x] `customer.subscription.updated` updates subscription status
+- [x] `customer.subscription.deleted` marks subscription canceled
+- [x] `invoice.payment_failed` updates status to past_due
 
 **Files:**
 - Create: `app/api/stripe/webhook/route.ts` — webhook handler
