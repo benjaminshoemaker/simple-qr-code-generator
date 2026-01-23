@@ -282,11 +282,11 @@ Human must complete before agents begin:
 **What:** Add credentials provider for email/password authentication.
 
 **Acceptance Criteria:**
-- [ ] CredentialsProvider configured in NextAuth
-- [ ] Password hashing with bcrypt on signup
-- [ ] Password verification on login
-- [ ] User created in database on signup
-- [ ] Error handling for invalid credentials
+- [x] CredentialsProvider configured in NextAuth
+- [x] Password hashing with bcrypt on signup
+- [x] Password verification on login
+- [x] User created in database on signup
+- [x] Error handling for invalid credentials
 
 **Files:**
 - Modify: `lib/auth.ts` — add CredentialsProvider
