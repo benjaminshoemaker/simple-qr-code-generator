@@ -213,11 +213,11 @@ Human must complete before agents begin:
 **What:** Set up Drizzle ORM with Neon database connection.
 
 **Acceptance Criteria:**
-- [ ] `drizzle-orm` and `@neondatabase/serverless` installed
-- [ ] `drizzle.config.ts` configured for Neon
-- [ ] Database client created in `lib/db/index.ts`
-- [ ] Connection works (verified by running a simple query)
-- [ ] `drizzle-kit` installed for migrations
+- [x] `drizzle-orm` and `@neondatabase/serverless` installed
+- [x] `drizzle.config.ts` configured for Neon
+- [x] Database client created in `lib/db/index.ts`
+- [x] Connection works (verified by running a simple query)
+- [x] `drizzle-kit` installed for migrations
 
 **Files:**
 - Create: `lib/db/index.ts` — database client
