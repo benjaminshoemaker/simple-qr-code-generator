@@ -260,11 +260,11 @@ Human must complete before agents begin:
 **What:** Set up NextAuth.js with Drizzle adapter.
 
 **Acceptance Criteria:**
-- [ ] `next-auth` v5 and `@auth/drizzle-adapter` installed
-- [ ] Auth configuration created in `lib/auth.ts`
-- [ ] NextAuth API route set up at `app/api/auth/[...nextauth]/route.ts`
-- [ ] Session strategy set to JWT
-- [ ] Session callback includes user ID
+- [x] `next-auth` v5 and `@auth/drizzle-adapter` installed
+- [x] Auth configuration created in `lib/auth.ts`
+- [x] NextAuth API route set up at `app/api/auth/[...nextauth]/route.ts`
+- [x] Session strategy set to JWT
+- [x] Session callback includes user ID
 
 **Files:**
 - Create: `lib/auth.ts` — NextAuth configuration
