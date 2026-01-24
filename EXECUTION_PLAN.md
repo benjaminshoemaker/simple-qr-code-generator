@@ -940,8 +940,8 @@ Human must complete before agents begin:
 **Manual Verification:**
 - [x] Analytics show scan data correctly
 - [x] CSV export downloads valid file
-- [x] Rate limiting works (hit endpoint 100+ times rapidly)
-- [x] Malicious URL rejected (test with known bad URL)
+- [ ] Rate limiting works (hit endpoint 100+ times rapidly)
+- [ ] Malicious URL rejected (test with known bad URL)
 - [x] Error states display properly
 - [x] Settings page allows updates
 - [ ] Full user journey works: signup → subscribe → create QR → scan → view analytics
