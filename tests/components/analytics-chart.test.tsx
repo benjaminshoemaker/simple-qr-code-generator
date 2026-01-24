@@ -33,6 +33,7 @@ describe("<AnalyticsChart />", () => {
     render(<AnalyticsChart qrCodeId={qrCodeId} />);
 
     expect(screen.getByRole("heading", { name: /analytics/i })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: /export csv/i })).toBeInTheDocument();
 
     await waitFor(() => expect(fetchMock).toHaveBeenCalledTimes(1));
     expect(screen.getByTestId("total-scans")).toHaveTextContent("10");
@@ -83,4 +84,3 @@ describe("<AnalyticsChart />", () => {
     expect(secondUrl).toContain("to=2024-01-31");
   });
 });
-

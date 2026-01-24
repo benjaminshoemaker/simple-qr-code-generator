@@ -111,6 +111,16 @@ export function AnalyticsChart({ qrCodeId }: { qrCodeId: string }) {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  const exportUrl = useMemo(() => {
+    const params = new URLSearchParams();
+    if (from) params.set("from", from);
+    if (to) params.set("to", to);
+
+    return `/api/qr/${qrCodeId}/analytics/export${
+      params.size ? `?${params.toString()}` : ""
+    }`;
+  }, [from, qrCodeId, to]);
+
   const fetchAnalytics = useCallback(
     async (range?: { from?: string; to?: string }) => {
       setIsLoading(true);
@@ -205,6 +215,15 @@ export function AnalyticsChart({ qrCodeId }: { qrCodeId: string }) {
               disabled={isLoading}
             >
               Apply
+            </Button>
+
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => window.location.assign(exportUrl)}
+              disabled={isLoading}
+            >
+              Export CSV
             </Button>
           </div>
         </div>

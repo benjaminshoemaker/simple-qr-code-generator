@@ -824,11 +824,11 @@ Human must complete before agents begin:
 **What:** Add ability to export scan data as CSV.
 
 **Acceptance Criteria:**
-- [ ] `GET /api/qr/[id]/analytics/export` returns CSV file
-- [ ] CSV includes: timestamp, country
-- [ ] Date range filtering supported
-- [ ] Response headers set for file download
-- [ ] Large exports stream data (don't load all in memory)
+- [x] `GET /api/qr/[id]/analytics/export` returns CSV file
+- [x] CSV includes: timestamp, country
+- [x] Date range filtering supported
+- [x] Response headers set for file download
+- [x] Large exports stream data (don't load all in memory)
 
 **Files:**
 - Create: `app/api/qr/[id]/analytics/export/route.ts` — CSV export endpoint
