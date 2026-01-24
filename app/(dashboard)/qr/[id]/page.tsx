@@ -5,6 +5,7 @@ import { qrCodes, folders } from "@/lib/db/schema";
 import { eq } from "drizzle-orm";
 import { buildShortUrl } from "@/lib/qr";
 import { QREditForm } from "./qr-edit-form";
+import { AnalyticsChart } from "@/components/analytics-chart";
 
 interface QRDetailPageProps {
   params: Promise<{ id: string }>;
@@ -63,9 +64,12 @@ export default async function QRDetailPage({ params }: QRDetailPageProps) {
   };
 
   return (
-    <QREditForm
-      qrCode={qrCodeData}
-      folders={userFolders}
-    />
+    <div className="space-y-8">
+      <QREditForm
+        qrCode={qrCodeData}
+        folders={userFolders}
+      />
+      <AnalyticsChart qrCodeId={qrCodeData.id} />
+    </div>
   );
 }

@@ -803,11 +803,11 @@ Human must complete before agents begin:
 **What:** Create analytics view for individual QR codes.
 
 **Acceptance Criteria:**
-- [ ] Analytics section on QR detail page (`/qr/[id]`)
-- [ ] Total scan count displayed prominently
-- [ ] Line chart showing scans over time
-- [ ] Table/chart showing scans by country
-- [ ] Date range picker for filtering
+- [x] Analytics section on QR detail page (`/qr/[id]`)
+- [x] Total scan count displayed prominently
+- [x] Line chart showing scans over time
+- [x] Table/chart showing scans by country
+- [x] Date range picker for filtering
 
 **Files:**
 - Modify: `app/(dashboard)/qr/[id]/page.tsx` — add analytics section
