@@ -2,7 +2,7 @@
   "version": "1.0",
   "projectRoot": "/Users/coding/Projects/simple-qr-code-generator",
   "commands": {
-    "test": "",
+    "test": "npm test",
     "lint": "npm run lint",
     "typecheck": "npx tsc --noEmit",
     "build": "npm run build",
