@@ -847,10 +847,10 @@ Human must complete before agents begin:
 **What:** Add rate limiting to redirect endpoint.
 
 **Acceptance Criteria:**
-- [ ] `@upstash/ratelimit` configured with Vercel KV
-- [ ] Redirect endpoint limited to 100 requests/minute per IP
-- [ ] 429 response returned when limit exceeded
-- [ ] Rate limit headers included in response
+- [x] `@upstash/ratelimit` configured with Vercel KV
+- [x] Redirect endpoint limited to 100 requests/minute per IP
+- [x] 429 response returned when limit exceeded
+- [x] Rate limit headers included in response
 
 **Files:**
 - Create: `lib/ratelimit.ts` — rate limiting configuration

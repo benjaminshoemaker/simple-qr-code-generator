@@ -3,6 +3,7 @@ import { db } from "@/lib/db";
 import { qrCodes } from "@/lib/db/schema";
 import { eq } from "drizzle-orm";
 import { isBot, hashIP, logScanEvent } from "@/lib/analytics";
+import { limitRedirectByIp } from "@/lib/ratelimit";
 
 export const runtime = "edge";
 
@@ -12,6 +13,37 @@ interface RouteContext {
 
 export async function GET(request: NextRequest, context: RouteContext) {
   const { code } = await context.params;
+
+  // Rate limit by IP (protects the redirect endpoint from abuse)
+  const ip =
+    request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
+    request.headers.get("x-real-ip") ||
+    "unknown";
+
+  const rate = await limitRedirectByIp(ip);
+  const rateLimitHeaders = {
+    "X-RateLimit-Limit": String(rate.limit),
+    "X-RateLimit-Remaining": String(rate.remaining),
+    "X-RateLimit-Reset": String(rate.reset),
+  };
+
+  if (!rate.success) {
+    const retryAfterSeconds = Math.max(
+      0,
+      Math.ceil((rate.reset - Date.now()) / 1000)
+    );
+
+    return NextResponse.json(
+      { error: "Too many requests" },
+      {
+        status: 429,
+        headers: {
+          ...rateLimitHeaders,
+          "Retry-After": String(retryAfterSeconds),
+        },
+      }
+    );
+  }
 
   // Lookup QR code by short code
   const qrCode = await db.query.qrCodes.findFirst({
@@ -28,6 +60,7 @@ export async function GET(request: NextRequest, context: RouteContext) {
     const baseUrl = process.env.NEXTAUTH_URL || "http://localhost:3000";
     return NextResponse.redirect(`${baseUrl}/go/${code}/not-found`, {
       status: 302,
+      headers: rateLimitHeaders,
     });
   }
 
@@ -36,6 +69,7 @@ export async function GET(request: NextRequest, context: RouteContext) {
     const baseUrl = process.env.NEXTAUTH_URL || "http://localhost:3000";
     return NextResponse.redirect(`${baseUrl}/go/${code}/gone`, {
       status: 302,
+      headers: rateLimitHeaders,
     });
   }
 
@@ -48,11 +82,6 @@ export async function GET(request: NextRequest, context: RouteContext) {
     const country = request.headers.get("x-vercel-ip-country") || undefined;
 
     // Get IP and hash it for privacy
-    const ip =
-      request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
-      request.headers.get("x-real-ip") ||
-      "unknown";
-
     // Fire and forget - don't await to avoid blocking redirect
     hashIP(ip).then((ipHash) => {
       logScanEvent(qrCode.id, country, ipHash).catch((error) => {
@@ -66,6 +95,7 @@ export async function GET(request: NextRequest, context: RouteContext) {
     status: 302,
     headers: {
       "Cache-Control": "no-store, max-age=0",
+      ...rateLimitHeaders,
     },
   });
 }
