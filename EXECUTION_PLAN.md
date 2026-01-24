@@ -868,11 +868,11 @@ Human must complete before agents begin:
 **What:** Check URLs against Google Safe Browsing API.
 
 **Acceptance Criteria:**
-- [ ] `checkUrlSafety` function queries Safe Browsing API
-- [ ] Called on QR code creation and URL update
-- [ ] Malicious URLs rejected with 400 response
-- [ ] Error message explains why URL was rejected
-- [ ] API errors logged but don't block creation (fail open)
+- [x] `checkUrlSafety` function queries Safe Browsing API
+- [x] Called on QR code creation and URL update
+- [x] Malicious URLs rejected with 400 response
+- [x] Error message explains why URL was rejected
+- [x] API errors logged but don't block creation (fail open)
 
 **Files:**
 - Create: `lib/safe-browsing.ts` — Safe Browsing API client

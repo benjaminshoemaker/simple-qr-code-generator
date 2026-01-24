@@ -10,6 +10,7 @@ import {
   checkQrLimit,
   SubscriptionError,
 } from "@/lib/subscription";
+import { checkUrlSafety } from "@/lib/safe-browsing";
 
 // Request body schema for creating a QR code
 const createQrSchema = z.object({
@@ -141,6 +142,17 @@ export async function POST(request: NextRequest) {
   if (!isValidUrl(destinationUrl)) {
     return NextResponse.json(
       { error: "Invalid URL. Must be a valid http or https URL." },
+      { status: 400 }
+    );
+  }
+
+  const safety = await checkUrlSafety(destinationUrl);
+  if (!safety.safe) {
+    return NextResponse.json(
+      {
+        error:
+          "Destination URL was rejected because it appears unsafe (Google Safe Browsing).",
+      },
       { status: 400 }
     );
   }

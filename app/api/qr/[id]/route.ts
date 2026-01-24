@@ -5,6 +5,7 @@ import { db } from "@/lib/db";
 import { qrCodes } from "@/lib/db/schema";
 import { eq, and } from "drizzle-orm";
 import { buildShortUrl, isValidUrl } from "@/lib/qr";
+import { checkUrlSafety } from "@/lib/safe-browsing";
 
 // Request body schema for updating a QR code
 const updateQrSchema = z.object({
@@ -116,6 +117,19 @@ export async function PATCH(request: NextRequest, context: RouteContext) {
       { error: "Invalid URL. Must be a valid http or https URL." },
       { status: 400 }
     );
+  }
+
+  if (destinationUrl !== undefined) {
+    const safety = await checkUrlSafety(destinationUrl);
+    if (!safety.safe) {
+      return NextResponse.json(
+        {
+          error:
+            "Destination URL was rejected because it appears unsafe (Google Safe Browsing).",
+        },
+        { status: 400 }
+      );
+    }
   }
 
   // Build update object
