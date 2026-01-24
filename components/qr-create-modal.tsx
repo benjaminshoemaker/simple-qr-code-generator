@@ -5,6 +5,8 @@ import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import QRCode from "qrcode";
+import { useToast } from "@/components/ui/toast";
+import { getApiErrorMessage, getApiFieldError } from "@/lib/errors";
 
 interface QRCreateModalProps {
   isOpen: boolean;
@@ -36,11 +38,17 @@ const qrStore = createQRStore();
 
 export function QRCreateModal({ isOpen, onClose, folders = [] }: QRCreateModalProps) {
   const router = useRouter();
+  const toast = useToast();
   const [destinationUrl, setDestinationUrl] = useState("");
   const [name, setName] = useState("");
   const [folderId, setFolderId] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [fieldErrors, setFieldErrors] = useState<{
+    destinationUrl?: string;
+    name?: string;
+    folderId?: string;
+  }>({});
   const [createdQR, setCreatedQR] = useState<{
     id: string;
     shortCode: string;
@@ -83,6 +91,7 @@ export function QRCreateModal({ isOpen, onClose, folders = [] }: QRCreateModalPr
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError(null);
+    setFieldErrors({});
     setIsLoading(true);
 
     try {
@@ -96,20 +105,44 @@ export function QRCreateModal({ isOpen, onClose, folders = [] }: QRCreateModalPr
         }),
       });
 
-      const data = await response.json();
+      const data = (await response.json().catch(() => null)) as unknown;
 
       if (!response.ok) {
-        setError(data.error || "Failed to create QR code");
+        const message = getApiErrorMessage(data) || "Failed to create QR code";
+        setError(message);
+        setFieldErrors({
+          destinationUrl: getApiFieldError(data, "destinationUrl") || undefined,
+          name: getApiFieldError(data, "name") || undefined,
+          folderId: getApiFieldError(data, "folderId") || undefined,
+        });
+        toast.error(message);
         return;
       }
 
+      const created = data as {
+        id?: unknown;
+        shortCode?: unknown;
+        shortUrl?: unknown;
+      };
+
+      if (
+        !created ||
+        typeof created.id !== "string" ||
+        typeof created.shortCode !== "string" ||
+        typeof created.shortUrl !== "string"
+      ) {
+        throw new Error("Invalid create QR response");
+      }
+
+      toast.success("QR code created");
       setCreatedQR({
-        id: data.id,
-        shortCode: data.shortCode,
-        shortUrl: data.shortUrl,
+        id: created.id,
+        shortCode: created.shortCode,
+        shortUrl: created.shortUrl,
       });
     } catch {
       setError("An unexpected error occurred");
+      toast.error("An unexpected error occurred");
     } finally {
       setIsLoading(false);
     }
@@ -272,7 +305,13 @@ export function QRCreateModal({ isOpen, onClose, folders = [] }: QRCreateModalPr
                     placeholder="https://example.com"
                     required
                     disabled={isLoading}
+                    className={fieldErrors.destinationUrl ? "border-red-500" : ""}
                   />
+                  {fieldErrors.destinationUrl && (
+                    <p className="mt-1 text-sm text-red-600">
+                      {fieldErrors.destinationUrl}
+                    </p>
+                  )}
                   <p className="mt-1 text-xs text-gray-500">
                     The URL where your QR code will redirect to
                   </p>
@@ -292,7 +331,13 @@ export function QRCreateModal({ isOpen, onClose, folders = [] }: QRCreateModalPr
                     onChange={(e) => setName(e.target.value)}
                     placeholder="My QR Code"
                     disabled={isLoading}
+                    className={fieldErrors.name ? "border-red-500" : ""}
                   />
+                  {fieldErrors.name && (
+                    <p className="mt-1 text-sm text-red-600">
+                      {fieldErrors.name}
+                    </p>
+                  )}
                   <p className="mt-1 text-xs text-gray-500">
                     A friendly name to help you identify this QR code
                   </p>

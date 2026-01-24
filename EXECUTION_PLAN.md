@@ -892,11 +892,11 @@ Human must complete before agents begin:
 **What:** Add comprehensive error handling and user feedback.
 
 **Acceptance Criteria:**
-- [ ] Global error boundary catches unhandled errors
-- [ ] API errors return consistent JSON format
-- [ ] Form validation errors displayed inline
-- [ ] Loading states shown during async operations
-- [ ] Toast notifications for success/error feedback
+- [x] Global error boundary catches unhandled errors
+- [x] API errors return consistent JSON format
+- [x] Form validation errors displayed inline
+- [x] Loading states shown during async operations
+- [x] Toast notifications for success/error feedback
 
 **Files:**
 - Create: `app/error.tsx` — global error boundary

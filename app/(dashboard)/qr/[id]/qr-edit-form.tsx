@@ -7,6 +7,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { TagInput } from "@/components/tag-input";
 import QRCode from "qrcode";
+import { useToast } from "@/components/ui/toast";
+import { getApiErrorMessage, getApiFieldError } from "@/lib/errors";
 
 interface QRCodeData {
   id: string;
@@ -55,6 +57,7 @@ const qrStore = createQRStore();
 
 export function QREditForm({ qrCode, folders }: QREditFormProps) {
   const router = useRouter();
+  const toast = useToast();
   const [destinationUrl, setDestinationUrl] = useState(qrCode.destinationUrl);
   const [name, setName] = useState(qrCode.name || "");
   const [folderId, setFolderId] = useState(qrCode.folderId || "");
@@ -63,6 +66,11 @@ export function QREditForm({ qrCode, folders }: QREditFormProps) {
   const [isSaving, setIsSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
+  const [fieldErrors, setFieldErrors] = useState<{
+    destinationUrl?: string;
+    name?: string;
+    folderId?: string;
+  }>({});
   const [copied, setCopied] = useState(false);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
 
@@ -96,6 +104,7 @@ export function QREditForm({ qrCode, folders }: QREditFormProps) {
   const handleSave = async () => {
     setError(null);
     setSuccess(null);
+    setFieldErrors({});
     setIsSaving(true);
 
     try {
@@ -107,21 +116,30 @@ export function QREditForm({ qrCode, folders }: QREditFormProps) {
           name: name || null,
           folderId: folderId || null,
           isActive,
-        }),
+          }),
       });
 
-      const data = await response.json();
+      const data = (await response.json().catch(() => null)) as unknown;
 
       if (!response.ok) {
-        setError(data.error || "Failed to update QR code");
+        const message = getApiErrorMessage(data) || "Failed to update QR code";
+        setError(message);
+        setFieldErrors({
+          destinationUrl: getApiFieldError(data, "destinationUrl") || undefined,
+          name: getApiFieldError(data, "name") || undefined,
+          folderId: getApiFieldError(data, "folderId") || undefined,
+        });
+        toast.error(message);
         return;
       }
 
       setSuccess("QR code updated successfully");
+      toast.success("QR code updated");
       setTimeout(() => setSuccess(null), 3000);
       router.refresh();
     } catch {
       setError("An unexpected error occurred");
+      toast.error("An unexpected error occurred");
     } finally {
       setIsSaving(false);
     }
@@ -136,16 +154,20 @@ export function QREditForm({ qrCode, folders }: QREditFormProps) {
       });
 
       if (!response.ok) {
-        const data = await response.json();
-        setError(data.error || "Failed to delete QR code");
+        const data = (await response.json().catch(() => null)) as unknown;
+        const message = getApiErrorMessage(data) || "Failed to delete QR code";
+        setError(message);
+        toast.error(message);
         setShowDeleteConfirm(false);
         return;
       }
 
+      toast.success("QR code deleted");
       router.push("/dashboard");
       router.refresh();
     } catch {
       setError("An unexpected error occurred");
+      toast.error("An unexpected error occurred");
       setShowDeleteConfirm(false);
     } finally {
       setIsLoading(false);
@@ -314,7 +336,13 @@ export function QREditForm({ qrCode, folders }: QREditFormProps) {
                   onChange={(e) => setDestinationUrl(e.target.value)}
                   placeholder="https://example.com"
                   disabled={isSaving}
+                  className={fieldErrors.destinationUrl ? "border-red-500" : ""}
                 />
+                {fieldErrors.destinationUrl && (
+                  <p className="mt-1 text-sm text-red-600">
+                    {fieldErrors.destinationUrl}
+                  </p>
+                )}
                 <p className="mt-1 text-xs text-gray-500">
                   Change where this QR code redirects to
                 </p>
@@ -334,7 +362,13 @@ export function QREditForm({ qrCode, folders }: QREditFormProps) {
                   onChange={(e) => setName(e.target.value)}
                   placeholder="My QR Code"
                   disabled={isSaving}
+                  className={fieldErrors.name ? "border-red-500" : ""}
                 />
+                {fieldErrors.name && (
+                  <p className="mt-1 text-sm text-red-600">
+                    {fieldErrors.name}
+                  </p>
+                )}
               </div>
 
               {folders.length > 0 && (
