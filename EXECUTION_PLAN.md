@@ -914,11 +914,11 @@ Human must complete before agents begin:
 **What:** Create user settings page for account management.
 
 **Acceptance Criteria:**
-- [ ] Settings page at `/settings`
-- [ ] Display user email and name
-- [ ] Allow name update
-- [ ] Show connected OAuth providers
-- [ ] Link to billing page
+- [x] Settings page at `/settings`
+- [x] Display user email and name
+- [x] Allow name update
+- [x] Show connected OAuth providers
+- [x] Link to billing page
 
 **Files:**
 - Create: `app/(dashboard)/settings/page.tsx` — settings page
