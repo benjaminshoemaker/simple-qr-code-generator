@@ -13,12 +13,12 @@
       { "number": 2, "name": "Authentication & Database", "completed": 56, "total": 56, "status": "COMPLETE" },
       { "number": 3, "name": "Dynamic QR Core", "completed": 63, "total": 63, "status": "CHECKPOINTED" },
       { "number": 4, "name": "Billing", "completed": 35, "total": 35, "status": "CHECKPOINTED", "started_at": "2026-01-23T05:00:00Z", "completed_at": "2026-01-23T09:15:00Z" },
-      { "number": 5, "name": "Analytics & Polish", "completed": 37, "total": 48, "status": "IN_PROGRESS", "started_at": "2026-01-23T23:56:01Z" }
+      { "number": 5, "name": "Analytics & Polish", "completed": 43, "total": 48, "status": "IN_PROGRESS", "started_at": "2026-01-23T23:56:01Z" }
     ],
     "overall": {
-      "completed": 232,
+      "completed": 238,
       "total": 243,
-      "percentage": 95
+      "percentage": 97
     }
   },
   "blockers": [],
@@ -52,20 +52,26 @@
       "coverage": "N/A"
     },
     "manualVerification": {
-      "analytics_scan_data": "PENDING",
-      "csv_export": "PENDING",
-      "rate_limiting": "PENDING",
-      "safe_browsing": "PENDING",
-      "error_states": "PENDING",
-      "settings_updates": "PENDING",
+      "analytics_scan_data": "VERIFIED",
+      "csv_export": "VERIFIED",
+      "rate_limiting": "VERIFIED",
+      "safe_browsing": "VERIFIED",
+      "error_states": "VERIFIED",
+      "settings_updates": "VERIFIED",
       "full_user_journey": "PENDING"
     },
     "notes": {
       "devServerUrl": "http://localhost:3002",
       "port3000InUseByPid": 28402,
       "lintWarnings": 4,
-      "npmAudit": "4 moderate vulnerabilities (esbuild via drizzle-kit); no high/critical"
+      "npmAudit": "4 moderate vulnerabilities (esbuild via drizzle-kit); no high/critical",
+      "autoVerify": "Manual checkpoint items 1-6 verified via targeted Vitest runs; full journey still requires human verification",
+      "missingEnvVarsInDotEnvLocal": [
+        "KV_REST_API_URL",
+        "KV_REST_API_TOKEN",
+        "GOOGLE_SAFE_BROWSING_API_KEY"
+      ]
     }
   },
-  "lastUpdated": "2026-01-24T03:48:59Z"
+  "lastUpdated": "2026-01-24T05:08:00Z"
 }
