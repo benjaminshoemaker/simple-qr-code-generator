@@ -1,0 +1,2893 @@
+{
+  "statistics": {
+    "detectionDate": "2026-01-25T00:26:20.063Z",
+    "formats": {
+      "javascript": {
+        "sources": {
+          "components/ui/toast.tsx": {
+            "lines": 32,
+            "tokens": 203,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "components/ui/select.tsx": {
+            "lines": 4,
+            "tokens": 15,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "components/ui/input.tsx": {
+            "lines": 5,
+            "tokens": 21,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "components/ui/button.tsx": {
+            "lines": 14,
+            "tokens": 73,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "components/tag-input.tsx": {
+            "lines": 78,
+            "tokens": 613,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "components/qr-generator.tsx": {
+            "lines": 71,
+            "tokens": 641,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "components/qr-create-modal.tsx": {
+            "lines": 168,
+            "tokens": 1341,
+            "sources": 1,
+            "clones": 3,
+            "duplicatedLines": 228,
+            "duplicatedTokens": 1708,
+            "percentage": 135.71,
+            "percentageTokens": 127.37,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "components/qr-card.tsx": {
+            "lines": 54,
+            "tokens": 424,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "components/folder-sidebar.tsx": {
+            "lines": 73,
+            "tokens": 701,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "components/analytics-chart.tsx": {
+            "lines": 219,
+            "tokens": 1677,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/go/[code]/not-found/page.tsx": {
+            "lines": 22,
+            "tokens": 163,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/go/[code]/gone/page.tsx": {
+            "lines": 22,
+            "tokens": 156,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/(dashboard)/qr/new/page.tsx": {
+            "lines": 163,
+            "tokens": 1238,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 118,
+            "duplicatedTokens": 882,
+            "percentage": 72.39,
+            "percentageTokens": 71.24,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/(dashboard)/qr/[id]/qr-edit-form.tsx": {
+            "lines": 242,
+            "tokens": 1773,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 110,
+            "duplicatedTokens": 826,
+            "percentage": 45.45,
+            "percentageTokens": 46.59,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/(dashboard)/qr/[id]/page.tsx": {
+            "lines": 3,
+            "tokens": 23,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/(marketing)/pricing/page.tsx": {
+            "lines": 86,
+            "tokens": 630,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/(dashboard)/settings/settings-form.tsx": {
+            "lines": 60,
+            "tokens": 385,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/(dashboard)/settings/page.tsx": {
+            "lines": 1,
+            "tokens": 27,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/(dashboard)/dashboard/page.tsx": {
+            "lines": 123,
+            "tokens": 1136,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/(dashboard)/billing/page.tsx": {
+            "lines": 14,
+            "tokens": 67,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/(dashboard)/billing/billing-client.tsx": {
+            "lines": 156,
+            "tokens": 1130,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/(auth)/signup/page.tsx": {
+            "lines": 188,
+            "tokens": 1203,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 92,
+            "duplicatedTokens": 560,
+            "percentage": 48.94,
+            "percentageTokens": 46.55,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/(auth)/login/page.tsx": {
+            "lines": 125,
+            "tokens": 742,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 92,
+            "duplicatedTokens": 560,
+            "percentage": 73.6,
+            "percentageTokens": 75.47,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/(dashboard)/layout.tsx": {
+            "lines": 72,
+            "tokens": 357,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/layout.tsx": {
+            "lines": 0,
+            "tokens": 15,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/error.tsx": {
+            "lines": 0,
+            "tokens": 3,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 1995,
+          "tokens": 14757,
+          "sources": 26,
+          "clones": 4,
+          "duplicatedLines": 320,
+          "duplicatedTokens": 2268,
+          "percentage": 16.04,
+          "percentageTokens": 15.37,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "tsx": {
+        "sources": {
+          "components/ui/toast.tsx": {
+            "lines": 131,
+            "tokens": 1027,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "components/ui/select.tsx": {
+            "lines": 24,
+            "tokens": 155,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "components/ui/input.tsx": {
+            "lines": 23,
+            "tokens": 151,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "components/ui/button.tsx": {
+            "lines": 35,
+            "tokens": 249,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "components/tag-input.tsx": {
+            "lines": 241,
+            "tokens": 1992,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "components/qr-generator.tsx": {
+            "lines": 193,
+            "tokens": 1786,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 21,
+            "duplicatedTokens": 234,
+            "percentage": 10.88,
+            "percentageTokens": 13.1,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "components/qr-create-modal.tsx": {
+            "lines": 385,
+            "tokens": 3354,
+            "sources": 1,
+            "clones": 16,
+            "duplicatedLines": 272,
+            "duplicatedTokens": 2521,
+            "percentage": 70.65,
+            "percentageTokens": 75.16,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "components/qr-card.tsx": {
+            "lines": 119,
+            "tokens": 902,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 7,
+            "duplicatedTokens": 113,
+            "percentage": 5.88,
+            "percentageTokens": 12.53,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "components/folder-sidebar.tsx": {
+            "lines": 177,
+            "tokens": 1571,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "components/analytics-chart.tsx": {
+            "lines": 304,
+            "tokens": 2524,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/go/[code]/not-found/page.tsx": {
+            "lines": 47,
+            "tokens": 311,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 24,
+            "duplicatedTokens": 116,
+            "percentage": 51.06,
+            "percentageTokens": 37.3,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/go/[code]/gone/page.tsx": {
+            "lines": 47,
+            "tokens": 304,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 24,
+            "duplicatedTokens": 116,
+            "percentage": 51.06,
+            "percentageTokens": 38.16,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/(dashboard)/qr/new/page.tsx": {
+            "lines": 355,
+            "tokens": 3009,
+            "sources": 1,
+            "clones": 10,
+            "duplicatedLines": 198,
+            "duplicatedTokens": 1746,
+            "percentage": 55.77,
+            "percentageTokens": 58.03,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/(dashboard)/qr/[id]/qr-edit-form.tsx": {
+            "lines": 477,
+            "tokens": 3969,
+            "sources": 1,
+            "clones": 9,
+            "duplicatedLines": 122,
+            "duplicatedTokens": 1168,
+            "percentage": 25.58,
+            "percentageTokens": 29.43,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/(dashboard)/qr/[id]/page.tsx": {
+            "lines": 74,
+            "tokens": 596,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/(marketing)/pricing/page.tsx": {
+            "lines": 211,
+            "tokens": 1620,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/(dashboard)/settings/settings-form.tsx": {
+            "lines": 151,
+            "tokens": 1110,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/(dashboard)/settings/page.tsx": {
+            "lines": 49,
+            "tokens": 448,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/(dashboard)/dashboard/page.tsx": {
+            "lines": 285,
+            "tokens": 2669,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/(dashboard)/billing/page.tsx": {
+            "lines": 38,
+            "tokens": 268,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/(dashboard)/billing/billing-client.tsx": {
+            "lines": 314,
+            "tokens": 2369,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/(auth)/signup/page.tsx": {
+            "lines": 327,
+            "tokens": 2354,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 52,
+            "duplicatedTokens": 323,
+            "percentage": 15.9,
+            "percentageTokens": 13.72,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/(auth)/login/page.tsx": {
+            "lines": 192,
+            "tokens": 1304,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 52,
+            "duplicatedTokens": 323,
+            "percentage": 27.08,
+            "percentageTokens": 24.77,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/(marketing)/layout.tsx": {
+            "lines": 48,
+            "tokens": 366,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 27,
+            "duplicatedTokens": 235,
+            "percentage": 56.25,
+            "percentageTokens": 64.21,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/(dashboard)/layout.tsx": {
+            "lines": 152,
+            "tokens": 886,
+            "sources": 1,
+            "clones": 4,
+            "duplicatedLines": 52,
+            "duplicatedTokens": 260,
+            "percentage": 34.21,
+            "percentageTokens": 29.35,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/(auth)/layout.tsx": {
+            "lines": 22,
+            "tokens": 168,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/page.tsx": {
+            "lines": 164,
+            "tokens": 1580,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 27,
+            "duplicatedTokens": 235,
+            "percentage": 16.46,
+            "percentageTokens": 14.87,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/layout.tsx": {
+            "lines": 34,
+            "tokens": 244,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/error.tsx": {
+            "lines": 41,
+            "tokens": 307,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 4660,
+          "tokens": 37593,
+          "sources": 29,
+          "clones": 26,
+          "duplicatedLines": 439,
+          "duplicatedTokens": 3695,
+          "percentage": 9.42,
+          "percentageTokens": 9.83,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "typescript": {
+        "sources": {
+          "lib/db/schema.ts": {
+            "lines": 263,
+            "tokens": 2825,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 10,
+            "duplicatedTokens": 152,
+            "percentage": 3.8,
+            "percentageTokens": 5.38,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "lib/db/index.ts": {
+            "lines": 11,
+            "tokens": 116,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "lib/utils.ts": {
+            "lines": 5,
+            "tokens": 61,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "lib/subscription.ts": {
+            "lines": 131,
+            "tokens": 916,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "lib/stripe.ts": {
+            "lines": 47,
+            "tokens": 358,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "lib/safe-browsing.ts": {
+            "lines": 71,
+            "tokens": 601,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "lib/redis.ts": {
+            "lines": 125,
+            "tokens": 1278,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "lib/ratelimit.ts": {
+            "lines": 62,
+            "tokens": 466,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "lib/qr.ts": {
+            "lines": 67,
+            "tokens": 466,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "lib/errors.ts": {
+            "lines": 31,
+            "tokens": 457,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "lib/auth.ts": {
+            "lines": 93,
+            "tokens": 733,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "lib/auth-utils.ts": {
+            "lines": 43,
+            "tokens": 352,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "lib/analytics.ts": {
+            "lines": 119,
+            "tokens": 997,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/api/qr/[id]/tags/[tagId]/route.ts": {
+            "lines": 45,
+            "tokens": 489,
+            "sources": 1,
+            "clones": 9,
+            "duplicatedLines": 120,
+            "duplicatedTokens": 1258,
+            "percentage": 266.67,
+            "percentageTokens": 257.26,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/api/qr/[id]/analytics/export/route.ts": {
+            "lines": 116,
+            "tokens": 1064,
+            "sources": 1,
+            "clones": 7,
+            "duplicatedLines": 105,
+            "duplicatedTokens": 1098,
+            "percentage": 90.52,
+            "percentageTokens": 103.2,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/api/qr/[id]/tags/route.ts": {
+            "lines": 139,
+            "tokens": 1310,
+            "sources": 1,
+            "clones": 4,
+            "duplicatedLines": 59,
+            "duplicatedTokens": 614,
+            "percentage": 42.45,
+            "percentageTokens": 46.87,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/api/qr/[id]/analytics/route.ts": {
+            "lines": 99,
+            "tokens": 947,
+            "sources": 1,
+            "clones": 3,
+            "duplicatedLines": 57,
+            "duplicatedTokens": 581,
+            "percentage": 57.58,
+            "percentageTokens": 61.35,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/api/stripe/webhook/route.ts": {
+            "lines": 237,
+            "tokens": 1828,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/api/stripe/portal/route.ts": {
+            "lines": 41,
+            "tokens": 374,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/api/stripe/checkout/route.ts": {
+            "lines": 103,
+            "tokens": 905,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 29,
+            "duplicatedTokens": 297,
+            "percentage": 28.16,
+            "percentageTokens": 32.82,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/api/qr/[id]/route.ts": {
+            "lines": 209,
+            "tokens": 1991,
+            "sources": 1,
+            "clones": 7,
+            "duplicatedLines": 97,
+            "duplicatedTokens": 1002,
+            "percentage": 46.41,
+            "percentageTokens": 50.33,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/api/folders/[id]/route.ts": {
+            "lines": 52,
+            "tokens": 523,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 12,
+            "duplicatedTokens": 144,
+            "percentage": 23.08,
+            "percentageTokens": 27.53,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/api/auth/signup/route.ts": {
+            "lines": 94,
+            "tokens": 709,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/go/[code]/route.ts": {
+            "lines": 100,
+            "tokens": 820,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/api/user/route.ts": {
+            "lines": 68,
+            "tokens": 640,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/api/tags/route.ts": {
+            "lines": 76,
+            "tokens": 658,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 24,
+            "duplicatedTokens": 230,
+            "percentage": 31.58,
+            "percentageTokens": 34.95,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/api/qr/route.ts": {
+            "lines": 188,
+            "tokens": 1669,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 8,
+            "duplicatedTokens": 81,
+            "percentage": 4.26,
+            "percentageTokens": 4.85,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/api/folders/route.ts": {
+            "lines": 90,
+            "tokens": 767,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 25,
+            "duplicatedTokens": 239,
+            "percentage": 27.78,
+            "percentageTokens": 31.16,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 2725,
+          "tokens": 24320,
+          "sources": 28,
+          "clones": 20,
+          "duplicatedLines": 273,
+          "duplicatedTokens": 2848,
+          "percentage": 10.02,
+          "percentageTokens": 11.71,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "css": {
+        "sources": {
+          "app/globals.css": {
+            "lines": 25,
+            "tokens": 145,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 25,
+          "tokens": 145,
+          "sources": 1,
+          "clones": 0,
+          "duplicatedLines": 0,
+          "duplicatedTokens": 0,
+          "percentage": 0,
+          "percentageTokens": 0,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      }
+    },
+    "total": {
+      "lines": 9405,
+      "tokens": 76815,
+      "sources": 84,
+      "clones": 50,
+      "duplicatedLines": 1032,
+      "duplicatedTokens": 8811,
+      "percentage": 10.97,
+      "percentageTokens": 11.47,
+      "newDuplicatedLines": 0,
+      "newClones": 0
+    }
+  },
+  "duplicates": [
+    {
+      "format": "tsx",
+      "lines": 12,
+      "fragment": "function createQRStore() {\n  let snapshot = { dataUrl: \"\", svgString: \"\" };\n  const listeners = new Set<() => void>();\n\n  return {\n    getSnapshot: () => snapshot,\n    subscribe: (listener: () => void) => {\n      listeners.add(listener);\n      return () => listeners.delete(listener);\n    },\n    setData: (png: string, svg: string) => {\n      if",
+      "tokens": 0,
+      "firstFile": {
+        "name": "components/qr-create-modal.tsx",
+        "start": 18,
+        "end": 29,
+        "startLoc": {
+          "line": 18,
+          "column": 1,
+          "position": 154
+        },
+        "endLoc": {
+          "line": 29,
+          "column": 3,
+          "position": 296
+        }
+      },
+      "secondFile": {
+        "name": "components/qr-generator.tsx",
+        "start": 16,
+        "end": 27,
+        "startLoc": {
+          "line": 16,
+          "column": 1,
+          "position": 116
+        },
+        "endLoc": {
+          "line": 27,
+          "column": 55,
+          "position": 258
+        }
+      }
+    },
+    {
+      "format": "tsx",
+      "lines": 11,
+      "fragment": "if (snapshot.dataUrl !== png || snapshot.svgString !== svg) {\n        snapshot = { dataUrl: png, svgString: svg };\n        listeners.forEach((l) => l());\n      }\n    },\n  };\n}\n\nconst qrStore = createQRStore();\n\nexport function QRCreateModal",
+      "tokens": 0,
+      "firstFile": {
+        "name": "components/qr-create-modal.tsx",
+        "start": 29,
+        "end": 39,
+        "startLoc": {
+          "line": 29,
+          "column": 7,
+          "position": 296
+        },
+        "endLoc": {
+          "line": 39,
+          "column": 14,
+          "position": 388
+        }
+      },
+      "secondFile": {
+        "name": "components/qr-generator.tsx",
+        "start": 28,
+        "end": 38,
+        "startLoc": {
+          "line": 28,
+          "column": 7,
+          "position": 261
+        },
+        "endLoc": {
+          "line": 38,
+          "column": 12,
+          "position": 353
+        }
+      }
+    },
+    {
+      "format": "typescript",
+      "lines": 6,
+      "fragment": ", {\n  id: uuid(\"id\").primaryKey().defaultRandom(),\n  userId: uuid(\"user_id\")\n    .references(() => users.id, { onDelete: \"cascade\" })\n    .notNull(),\n  name: varchar(\"name\", { length: 100",
+      "tokens": 0,
+      "firstFile": {
+        "name": "lib/db/schema.ts",
+        "start": 136,
+        "end": 141,
+        "startLoc": {
+          "line": 136,
+          "column": 7,
+          "position": 1457
+        },
+        "endLoc": {
+          "line": 141,
+          "column": 4,
+          "position": 1533
+        }
+      },
+      "secondFile": {
+        "name": "lib/db/schema.ts",
+        "start": 115,
+        "end": 120,
+        "startLoc": {
+          "line": 115,
+          "column": 10,
+          "position": 1237
+        },
+        "endLoc": {
+          "line": 120,
+          "column": 4,
+          "position": 1313
+        }
+      }
+    },
+    {
+      "format": "typescript",
+      "lines": 8,
+      "fragment": "(request: NextRequest, context: RouteContext) {\n  const session = await auth();\n\n  if (!session?.user?.id) {\n    return NextResponse.json({ error: \"Unauthorized\" }, { status: 401 });\n  }\n\n  const { id }",
+      "tokens": 0,
+      "firstFile": {
+        "name": "app/api/qr/[id]/analytics/export/route.ts",
+        "start": 16,
+        "end": 23,
+        "startLoc": {
+          "line": 16,
+          "column": 4,
+          "position": 129
+        },
+        "endLoc": {
+          "line": 23,
+          "column": 2,
+          "position": 214
+        }
+      },
+      "secondFile": {
+        "name": "app/api/qr/[id]/tags/[tagId]/route.ts",
+        "start": 12,
+        "end": 19,
+        "startLoc": {
+          "line": 12,
+          "column": 7,
+          "position": 116
+        },
+        "endLoc": {
+          "line": 19,
+          "column": 2,
+          "position": 200
+        }
+      }
+    },
+    {
+      "format": "typescript",
+      "lines": 12,
+      "fragment": ",\n  });\n\n  if (!qrCode) {\n    return NextResponse.json({ error: \"QR code not found\" }, { status: 404 });\n  }\n\n  if (qrCode.userId !== session.user.id) {\n    return NextResponse.json({ error: \"Forbidden\" }, { status: 403 });\n  }\n\n  const",
+      "tokens": 0,
+      "firstFile": {
+        "name": "app/api/qr/[id]/analytics/export/route.ts",
+        "start": 37,
+        "end": 48,
+        "startLoc": {
+          "line": 37,
+          "column": 2,
+          "position": 343
+        },
+        "endLoc": {
+          "line": 48,
+          "column": 6,
+          "position": 445
+        }
+      },
+      "secondFile": {
+        "name": "app/api/qr/[id]/tags/[tagId]/route.ts",
+        "start": 29,
+        "end": 40,
+        "startLoc": {
+          "line": 29,
+          "column": 2,
+          "position": 321
+        },
+        "endLoc": {
+          "line": 40,
+          "column": 27,
+          "position": 423
+        }
+      }
+    },
+    {
+      "format": "typescript",
+      "lines": 16,
+      "fragment": "export async function GET(request: NextRequest, context: RouteContext) {\n  const session = await auth();\n\n  if (!session?.user?.id) {\n    return NextResponse.json({ error: \"Unauthorized\" }, { status: 401 });\n  }\n\n  const { id } = await context.params;\n\n  // Validate UUID format\n  const uuidRegex = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;\n  if (!uuidRegex.test(id)) {\n    return NextResponse.json({ error: \"Invalid QR code ID\" }, { status: 400 });\n  }\n\n  // Find QR code and verify ownership",
+      "tokens": 0,
+      "firstFile": {
+        "name": "app/api/qr/[id]/tags/route.ts",
+        "start": 18,
+        "end": 33,
+        "startLoc": {
+          "line": 18,
+          "column": 1,
+          "position": 154
+        },
+        "endLoc": {
+          "line": 33,
+          "column": 37,
+          "position": 319
+        }
+      },
+      "secondFile": {
+        "name": "app/api/qr/[id]/analytics/export/route.ts",
+        "start": 16,
+        "end": 32,
+        "startLoc": {
+          "line": 16,
+          "column": 1,
+          "position": 122
+        },
+        "endLoc": {
+          "line": 32,
+          "column": 6,
+          "position": 288
+        }
+      }
+    },
+    {
+      "format": "typescript",
+      "lines": 17,
+      "fragment": "}, { status: 400 });\n  }\n\n  // Find QR code and verify ownership\n  const qrCode = await db.query.qrCodes.findFirst({\n    where: eq(qrCodes.id, id),\n  });\n\n  if (!qrCode) {\n    return NextResponse.json({ error: \"QR code not found\" }, { status: 404 });\n  }\n\n  if (qrCode.userId !== session.user.id) {\n    return NextResponse.json({ error: \"Forbidden\" }, { status: 403 });\n  }\n\n  // Get tags for this QR code",
+      "tokens": 0,
+      "firstFile": {
+        "name": "app/api/qr/[id]/tags/route.ts",
+        "start": 30,
+        "end": 46,
+        "startLoc": {
+          "line": 30,
+          "column": 2,
+          "position": 300
+        },
+        "endLoc": {
+          "line": 46,
+          "column": 29,
+          "position": 455
+        }
+      },
+      "secondFile": {
+        "name": "app/api/qr/[id]/tags/[tagId]/route.ts",
+        "start": 24,
+        "end": 40,
+        "startLoc": {
+          "line": 24,
+          "column": 2,
+          "position": 268
+        },
+        "endLoc": {
+          "line": 40,
+          "column": 27,
+          "position": 423
+        }
+      }
+    },
+    {
+      "format": "typescript",
+      "lines": 16,
+      "fragment": "(request: NextRequest, context: RouteContext) {\n  const session = await auth();\n\n  if (!session?.user?.id) {\n    return NextResponse.json({ error: \"Unauthorized\" }, { status: 401 });\n  }\n\n  const { id } = await context.params;\n\n  // Validate UUID format\n  const uuidRegex = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;\n  if (!uuidRegex.test(id)) {\n    return NextResponse.json({ error: \"Invalid QR code ID\" }, { status: 400 });\n  }\n\n  let",
+      "tokens": 0,
+      "firstFile": {
+        "name": "app/api/qr/[id]/tags/route.ts",
+        "start": 62,
+        "end": 77,
+        "startLoc": {
+          "line": 62,
+          "column": 5,
+          "position": 573
+        },
+        "endLoc": {
+          "line": 77,
+          "column": 4,
+          "position": 731
+        }
+      },
+      "secondFile": {
+        "name": "app/api/qr/[id]/tags/[tagId]/route.ts",
+        "start": 12,
+        "end": 32,
+        "startLoc": {
+          "line": 12,
+          "column": 7,
+          "position": 116
+        },
+        "endLoc": {
+          "line": 32,
+          "column": 6,
+          "position": 288
+        }
+      }
+    },
+    {
+      "format": "typescript",
+      "lines": 14,
+      "fragment": "// Find QR code and verify ownership\n  const qrCode = await db.query.qrCodes.findFirst({\n    where: eq(qrCodes.id, id),\n  });\n\n  if (!qrCode) {\n    return NextResponse.json({ error: \"QR code not found\" }, { status: 404 });\n  }\n\n  if (qrCode.userId !== session.user.id) {\n    return NextResponse.json({ error: \"Forbidden\" }, { status: 403 });\n  }\n\n  // Verify tag exists and belongs to user",
+      "tokens": 0,
+      "firstFile": {
+        "name": "app/api/qr/[id]/tags/route.ts",
+        "start": 95,
+        "end": 108,
+        "startLoc": {
+          "line": 95,
+          "column": 3,
+          "position": 891
+        },
+        "endLoc": {
+          "line": 108,
+          "column": 41,
+          "position": 1027
+        }
+      },
+      "secondFile": {
+        "name": "app/api/qr/[id]/tags/[tagId]/route.ts",
+        "start": 27,
+        "end": 40,
+        "startLoc": {
+          "line": 27,
+          "column": 3,
+          "position": 287
+        },
+        "endLoc": {
+          "line": 40,
+          "column": 27,
+          "position": 423
+        }
+      }
+    },
+    {
+      "format": "typescript",
+      "lines": 15,
+      "fragment": "import { NextRequest, NextResponse } from \"next/server\";\nimport { auth } from \"@/lib/auth\";\nimport { db } from \"@/lib/db\";\nimport { qrCodes, scanEvents } from \"@/lib/db/schema\";\nimport { eq, sql } from \"drizzle-orm\";\nimport {\n  buildScanEventsWhereClause,\n  parseAnalyticsDateRange,\n} from \"@/lib/analytics\";\n\ninterface RouteContext {\n  params: Promise<{ id: string }>;\n}\n\n// GET /api/qr/[id]/analytics - Get analytics data for a QR code",
+      "tokens": 0,
+      "firstFile": {
+        "name": "app/api/qr/[id]/analytics/route.ts",
+        "start": 1,
+        "end": 15,
+        "startLoc": {
+          "line": 1,
+          "column": 1,
+          "position": 0
+        },
+        "endLoc": {
+          "line": 15,
+          "column": 65,
+          "position": 120
+        }
+      },
+      "secondFile": {
+        "name": "app/api/qr/[id]/analytics/export/route.ts",
+        "start": 1,
+        "end": 15,
+        "startLoc": {
+          "line": 1,
+          "column": 1,
+          "position": 0
+        },
+        "endLoc": {
+          "line": 15,
+          "column": 65,
+          "position": 120
+        }
+      }
+    },
+    {
+      "format": "typescript",
+      "lines": 20,
+      "fragment": "export async function GET(request: NextRequest, context: RouteContext) {\n  const session = await auth();\n\n  if (!session?.user?.id) {\n    return NextResponse.json({ error: \"Unauthorized\" }, { status: 401 });\n  }\n\n  const { id } = await context.params;\n\n  // Validate UUID format\n  const uuidRegex =\n    /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;\n  if (!uuidRegex.test(id)) {\n    return NextResponse.json({ error: \"Invalid QR code ID\" }, { status: 400 });\n  }\n\n  const qrCode = await db.query.qrCodes.findFirst({\n    where: eq(qrCodes.id, id),\n    columns: {\n      id",
+      "tokens": 0,
+      "firstFile": {
+        "name": "app/api/qr/[id]/analytics/route.ts",
+        "start": 16,
+        "end": 35,
+        "startLoc": {
+          "line": 16,
+          "column": 1,
+          "position": 122
+        },
+        "endLoc": {
+          "line": 35,
+          "column": 3,
+          "position": 328
+        }
+      },
+      "secondFile": {
+        "name": "app/api/qr/[id]/analytics/export/route.ts",
+        "start": 16,
+        "end": 35,
+        "startLoc": {
+          "line": 16,
+          "column": 1,
+          "position": 122
+        },
+        "endLoc": {
+          "line": 35,
+          "column": 7,
+          "position": 328
+        }
+      }
+    },
+    {
+      "format": "typescript",
+      "lines": 25,
+      "fragment": ": true,\n    },\n  });\n\n  if (!qrCode) {\n    return NextResponse.json({ error: \"QR code not found\" }, { status: 404 });\n  }\n\n  if (qrCode.userId !== session.user.id) {\n    return NextResponse.json({ error: \"Forbidden\" }, { status: 403 });\n  }\n\n  const { searchParams } = new URL(request.url);\n  const fromParam = searchParams.get(\"from\");\n  const toParam = searchParams.get(\"to\");\n\n  let dateRange;\n  try {\n    dateRange = parseAnalyticsDateRange(fromParam, toParam);\n  } catch (error) {\n    const message = error instanceof Error ? error.message : \"Invalid query params\";\n    return NextResponse.json({ error: message }, { status: 400 });\n  }\n\n  const whereConditions",
+      "tokens": 0,
+      "firstFile": {
+        "name": "app/api/qr/[id]/analytics/route.ts",
+        "start": 36,
+        "end": 60,
+        "startLoc": {
+          "line": 36,
+          "column": 7,
+          "position": 336
+        },
+        "endLoc": {
+          "line": 60,
+          "column": 16,
+          "position": 591
+        }
+      },
+      "secondFile": {
+        "name": "app/api/qr/[id]/analytics/export/route.ts",
+        "start": 36,
+        "end": 60,
+        "startLoc": {
+          "line": 36,
+          "column": 10,
+          "position": 336
+        },
+        "endLoc": {
+          "line": 60,
+          "column": 9,
+          "position": 591
+        }
+      }
+    },
+    {
+      "format": "tsx",
+      "lines": 25,
+      "fragment": ".\n        </p>\n        <Link\n          href=\"/\"\n          className=\"inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors\"\n        >\n          <svg\n            className=\"w-4 h-4\"\n            fill=\"none\"\n            stroke=\"currentColor\"\n            viewBox=\"0 0 24 24\"\n          >\n            <path\n              strokeLinecap=\"round\"\n              strokeLinejoin=\"round\"\n              strokeWidth={2}\n              d=\"M10 19l-7-7m0 0l7-7m-7 7h18\"\n            />\n          </svg>\n          Go to Homepage\n        </Link>\n      </div>\n    </div>\n  );\n}",
+      "tokens": 0,
+      "firstFile": {
+        "name": "app/go/[code]/gone/page.tsx",
+        "start": 24,
+        "end": 48,
+        "startLoc": {
+          "line": 24,
+          "column": 7,
+          "position": 188
+        },
+        "endLoc": {
+          "line": 48,
+          "column": 2,
+          "position": 304
+        }
+      },
+      "secondFile": {
+        "name": "app/go/[code]/not-found/page.tsx",
+        "start": 24,
+        "end": 48,
+        "startLoc": {
+          "line": 24,
+          "column": 10,
+          "position": 195
+        },
+        "endLoc": {
+          "line": 48,
+          "column": 2,
+          "position": 311
+        }
+      }
+    },
+    {
+      "format": "typescript",
+      "lines": 16,
+      "fragment": "export async function GET(request: NextRequest, context: RouteContext) {\n  const session = await auth();\n\n  if (!session?.user?.id) {\n    return NextResponse.json({ error: \"Unauthorized\" }, { status: 401 });\n  }\n\n  const { id } = await context.params;\n\n  // Validate UUID format\n  const uuidRegex = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;\n  if (!uuidRegex.test(id)) {\n    return NextResponse.json({ error: \"Invalid QR code ID\" }, { status: 400 });\n  }\n\n  // Find QR code",
+      "tokens": 0,
+      "firstFile": {
+        "name": "app/api/qr/[id]/route.ts",
+        "start": 23,
+        "end": 38,
+        "startLoc": {
+          "line": 23,
+          "column": 1,
+          "position": 243
+        },
+        "endLoc": {
+          "line": 38,
+          "column": 16,
+          "position": 408
+        }
+      },
+      "secondFile": {
+        "name": "app/api/qr/[id]/analytics/export/route.ts",
+        "start": 16,
+        "end": 32,
+        "startLoc": {
+          "line": 16,
+          "column": 1,
+          "position": 122
+        },
+        "endLoc": {
+          "line": 32,
+          "column": 6,
+          "position": 288
+        }
+      }
+    },
+    {
+      "format": "typescript",
+      "lines": 9,
+      "fragment": "const qrCode = await db.query.qrCodes.findFirst({\n    where: eq(qrCodes.id, id),\n  });\n\n  if (!qrCode) {\n    return NextResponse.json({ error: \"QR code not found\" }, { status: 404 });\n  }\n\n  // Check ownership",
+      "tokens": 0,
+      "firstFile": {
+        "name": "app/api/qr/[id]/route.ts",
+        "start": 39,
+        "end": 47,
+        "startLoc": {
+          "line": 39,
+          "column": 3,
+          "position": 411
+        },
+        "endLoc": {
+          "line": 47,
+          "column": 19,
+          "position": 493
+        }
+      },
+      "secondFile": {
+        "name": "app/api/qr/[id]/tags/[tagId]/route.ts",
+        "start": 28,
+        "end": 36,
+        "startLoc": {
+          "line": 28,
+          "column": 3,
+          "position": 290
+        },
+        "endLoc": {
+          "line": 36,
+          "column": 3,
+          "position": 372
+        }
+      }
+    },
+    {
+      "format": "typescript",
+      "lines": 24,
+      "fragment": "(request: NextRequest, context: RouteContext) {\n  const session = await auth();\n\n  if (!session?.user?.id) {\n    return NextResponse.json({ error: \"Unauthorized\" }, { status: 401 });\n  }\n\n  const { id } = await context.params;\n\n  // Validate UUID format\n  const uuidRegex = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;\n  if (!uuidRegex.test(id)) {\n    return NextResponse.json({ error: \"Invalid QR code ID\" }, { status: 400 });\n  }\n\n  let body;\n  try {\n    body = await request.json();\n  } catch {\n    return NextResponse.json({ error: \"Invalid JSON body\" }, { status: 400 });\n  }\n\n  // Validate request body\n  const result = updateQrSchema",
+      "tokens": 0,
+      "firstFile": {
+        "name": "app/api/qr/[id]/route.ts",
+        "start": 67,
+        "end": 90,
+        "startLoc": {
+          "line": 67,
+          "column": 6,
+          "position": 673
+        },
+        "endLoc": {
+          "line": 90,
+          "column": 15,
+          "position": 904
+        }
+      },
+      "secondFile": {
+        "name": "app/api/qr/[id]/tags/[tagId]/route.ts",
+        "start": 12,
+        "end": 85,
+        "startLoc": {
+          "line": 12,
+          "column": 7,
+          "position": 116
+        },
+        "endLoc": {
+          "line": 85,
+          "column": 13,
+          "position": 804
+        }
+      }
+    },
+    {
+      "format": "typescript",
+      "lines": 16,
+      "fragment": "export async function DELETE(request: NextRequest, context: RouteContext) {\n  const session = await auth();\n\n  if (!session?.user?.id) {\n    return NextResponse.json({ error: \"Unauthorized\" }, { status: 401 });\n  }\n\n  const { id } = await context.params;\n\n  // Validate UUID format\n  const uuidRegex = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;\n  if (!uuidRegex.test(id)) {\n    return NextResponse.json({ error: \"Invalid QR code ID\" }, { status: 400 });\n  }\n\n  // Find existing QR code",
+      "tokens": 0,
+      "firstFile": {
+        "name": "app/api/qr/[id]/route.ts",
+        "start": 175,
+        "end": 190,
+        "startLoc": {
+          "line": 175,
+          "column": 1,
+          "position": 1617
+        },
+        "endLoc": {
+          "line": 190,
+          "column": 25,
+          "position": 1782
+        }
+      },
+      "secondFile": {
+        "name": "app/api/qr/[id]/tags/[tagId]/route.ts",
+        "start": 12,
+        "end": 32,
+        "startLoc": {
+          "line": 12,
+          "column": 1,
+          "position": 109
+        },
+        "endLoc": {
+          "line": 32,
+          "column": 6,
+          "position": 288
+        }
+      }
+    },
+    {
+      "format": "typescript",
+      "lines": 15,
+      "fragment": "// Find existing QR code\n  const existingQr = await db.query.qrCodes.findFirst({\n    where: eq(qrCodes.id, id),\n  });\n\n  if (!existingQr) {\n    return NextResponse.json({ error: \"QR code not found\" }, { status: 404 });\n  }\n\n  // Check ownership\n  if (existingQr.userId !== session.user.id) {\n    return NextResponse.json({ error: \"Forbidden\" }, { status: 403 });\n  }\n\n  // Delete QR code",
+      "tokens": 0,
+      "firstFile": {
+        "name": "app/api/qr/[id]/route.ts",
+        "start": 190,
+        "end": 204,
+        "startLoc": {
+          "line": 190,
+          "column": 3,
+          "position": 1782
+        },
+        "endLoc": {
+          "line": 204,
+          "column": 18,
+          "position": 1921
+        }
+      },
+      "secondFile": {
+        "name": "app/api/qr/[id]/route.ts",
+        "start": 100,
+        "end": 114,
+        "startLoc": {
+          "line": 100,
+          "column": 3,
+          "position": 1000
+        },
+        "endLoc": {
+          "line": 114,
+          "column": 40,
+          "position": 1139
+        }
+      }
+    },
+    {
+      "format": "typescript",
+      "lines": 13,
+      "fragment": "export async function DELETE(request: NextRequest, context: RouteContext) {\n  const session = await auth();\n\n  if (!session?.user?.id) {\n    return NextResponse.json({ error: \"Unauthorized\" }, { status: 401 });\n  }\n\n  const { id } = await context.params;\n\n  // Validate UUID format\n  const uuidRegex = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;\n  if (!uuidRegex.test(id)) {\n    return NextResponse.json({ error: \"Invalid folder ID\"",
+      "tokens": 0,
+      "firstFile": {
+        "name": "app/api/folders/[id]/route.ts",
+        "start": 12,
+        "end": 24,
+        "startLoc": {
+          "line": 12,
+          "column": 1,
+          "position": 103
+        },
+        "endLoc": {
+          "line": 24,
+          "column": 20,
+          "position": 247
+        }
+      },
+      "secondFile": {
+        "name": "app/api/qr/[id]/tags/[tagId]/route.ts",
+        "start": 12,
+        "end": 29,
+        "startLoc": {
+          "line": 12,
+          "column": 1,
+          "position": 109
+        },
+        "endLoc": {
+          "line": 29,
+          "column": 21,
+          "position": 267
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 67,
+      "fragment": "={2} d=\"M15 19l-7-7 7-7\" />\n          </svg>\n          Back to Dashboard\n        </Link>\n      </div>\n\n      <div className=\"bg-white rounded-lg border border-gray-200 p-6\">\n        <h1 className=\"text-2xl font-bold text-gray-900 mb-6\">\n          {createdQR ? \"QR Code Created!\" : \"Create New QR Code\"}\n        </h1>\n\n        {createdQR ? (\n          // Success state with QR preview\n          <div className=\"text-center\">\n            {qrData.dataUrl && (\n              <div className=\"mb-6\">\n                <img\n                  src={qrData.dataUrl}\n                  alt=\"Generated QR Code\"\n                  className=\"mx-auto w-64 h-64 border rounded-lg\"\n                />\n              </div>\n            )}\n\n            <div className=\"mb-6\">\n              <p className=\"text-sm text-gray-500 mb-2\">Your short URL:</p>\n              <div className=\"flex items-center justify-center gap-2\">\n                <code className=\"text-lg font-mono text-blue-600 bg-blue-50 px-4 py-2 rounded\">\n                  {createdQR.shortUrl}\n                </code>\n                <button\n                  onClick={handleCopyUrl}\n                  className=\"p-2 text-gray-400 hover:text-gray-600\"\n                  title=\"Copy URL\"\n                >\n                  {copied ? (\n                    <svg className=\"w-5 h-5 text-green-500\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\">\n                      <path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth={2} d=\"M5 13l4 4L19 7\" />\n                    </svg>\n                  ) : (\n                    <svg className=\"w-5 h-5\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\">\n                      <path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth={2} d=\"M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\" />\n                    </svg>\n                  )}\n                </button>\n              </div>\n            </div>\n\n            <div className=\"flex gap-3 justify-center mb-6\">\n              <Button\n                variant=\"outline\"\n                onClick={() => handleDownload(\"png\")}\n                disabled={!qrData.dataUrl}\n              >\n                Download PNG\n              </Button>\n              <Button\n                variant=\"outline\"\n                onClick={() => handleDownload(\"svg\")}\n                disabled={!qrData.svgString}\n              >\n                Download SVG\n              </Button>\n            </div>\n\n            <div className=\"flex gap-3 justify-center\">\n              <Button variant=\"outline\" onClick={handleCreateAnother",
+      "tokens": 0,
+      "firstFile": {
+        "name": "app/(dashboard)/qr/new/page.tsx",
+        "start": 184,
+        "end": 250,
+        "startLoc": {
+          "line": 184,
+          "column": 12,
+          "position": 1722
+        },
+        "endLoc": {
+          "line": 250,
+          "column": 20,
+          "position": 2261
+        }
+      },
+      "secondFile": {
+        "name": "components/qr-create-modal.tsx",
+        "start": 212,
+        "end": 272,
+        "startLoc": {
+          "line": 212,
+          "column": 12,
+          "position": 2018
+        },
+        "endLoc": {
+          "line": 272,
+          "column": 12,
+          "position": 2509
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 53,
+      "fragment": "}>\n                Create Another\n              </Button>\n              <Button\n                variant=\"primary\"\n                onClick={() => router.push(`/qr/${createdQR.id}`)}\n              >\n                View Details\n              </Button>\n            </div>\n          </div>\n        ) : (\n          // Creation form\n          <form onSubmit={handleSubmit}>\n            {error && (\n              <div className=\"mb-4 p-3 bg-red-50 border border-red-200 rounded-md text-red-700 text-sm\">\n                {error}\n              </div>\n            )}\n\n            <div className=\"space-y-4\">\n              <div>\n                <label\n                  htmlFor=\"destinationUrl\"\n                  className=\"block text-sm font-medium text-gray-700 mb-1\"\n                >\n                  Destination URL <span className=\"text-red-500\">*</span>\n                </label>\n                <Input\n                  id=\"destinationUrl\"\n                  type=\"url\"\n                  value={destinationUrl}\n                  onChange={(e) => setDestinationUrl(e.target.value)}\n                  placeholder=\"https://example.com\"\n                  required\n                  disabled={isLoading}\n                />\n                <p className=\"mt-1 text-xs text-gray-500\">\n                  The URL where your QR code will redirect to\n                </p>\n              </div>\n\n              <div>\n                <label\n                  htmlFor=\"name\"\n                  className=\"block text-sm font-medium text-gray-700 mb-1\"\n                >\n                  Name <span className=\"text-gray-400\">(optional)</span>\n                </label>\n                <Input\n                  id=\"name\"\n                  type=\"text\"\n                  value={name",
+      "tokens": 0,
+      "firstFile": {
+        "name": "app/(dashboard)/qr/new/page.tsx",
+        "start": 250,
+        "end": 302,
+        "startLoc": {
+          "line": 250,
+          "column": 20,
+          "position": 2262
+        },
+        "endLoc": {
+          "line": 302,
+          "column": 5,
+          "position": 2605
+        }
+      },
+      "secondFile": {
+        "name": "components/qr-create-modal.tsx",
+        "start": 272,
+        "end": 308,
+        "startLoc": {
+          "line": 272,
+          "column": 12,
+          "position": 2510
+        },
+        "endLoc": {
+          "line": 308,
+          "column": 12,
+          "position": 2745
+        }
+      }
+    },
+    {
+      "format": "tsx",
+      "lines": 23,
+      "fragment": "// QR code store for managing async generation\nfunction createQRStore() {\n  let snapshot = { dataUrl: \"\", svgString: \"\" };\n  const listeners = new Set<() => void>();\n\n  return {\n    getSnapshot: () => snapshot,\n    subscribe: (listener: () => void) => {\n      listeners.add(listener);\n      return () => listeners.delete(listener);\n    },\n    setData: (png: string, svg: string) => {\n      if (snapshot.dataUrl !== png || snapshot.svgString !== svg) {\n        snapshot = { dataUrl: png, svgString: svg };\n        listeners.forEach((l) => l());\n      }\n    },\n  };\n}\n\nconst qrStore = createQRStore();\n\ninterface",
+      "tokens": 0,
+      "firstFile": {
+        "name": "app/(dashboard)/qr/new/page.tsx",
+        "start": 10,
+        "end": 32,
+        "startLoc": {
+          "line": 10,
+          "column": 1,
+          "position": 81
+        },
+        "endLoc": {
+          "line": 32,
+          "column": 10,
+          "position": 313
+        }
+      },
+      "secondFile": {
+        "name": "components/qr-create-modal.tsx",
+        "start": 17,
+        "end": 38,
+        "startLoc": {
+          "line": 17,
+          "column": 1,
+          "position": 152
+        },
+        "endLoc": {
+          "line": 38,
+          "column": 7,
+          "position": 349
+        }
+      }
+    },
+    {
+      "format": "tsx",
+      "lines": 11,
+      "fragment": ");\n  const [createdQR, setCreatedQR] = useState<{\n    id: string;\n    shortCode: string;\n    shortUrl: string;\n  } | null>(null);\n  const [copied, setCopied] = useState(false);\n\n  const qrData = useSyncExternalStore(qrStore.subscribe, qrStore.getSnapshot, qrStore.getSnapshot);\n\n  // Load folders on mount",
+      "tokens": 0,
+      "firstFile": {
+        "name": "app/(dashboard)/qr/new/page.tsx",
+        "start": 44,
+        "end": 54,
+        "startLoc": {
+          "line": 44,
+          "column": 5,
+          "position": 478
+        },
+        "endLoc": {
+          "line": 54,
+          "column": 25,
+          "position": 576
+        }
+      },
+      "secondFile": {
+        "name": "components/qr-create-modal.tsx",
+        "start": 51,
+        "end": 61,
+        "startLoc": {
+          "line": 51,
+          "column": 2,
+          "position": 580
+        },
+        "endLoc": {
+          "line": 61,
+          "column": 45,
+          "position": 678
+        }
+      }
+    },
+    {
+      "format": "tsx",
+      "lines": 36,
+      "fragment": ");\n\n  // Generate QR code preview when URL changes\n  useEffect(() => {\n    if (!createdQR?.shortUrl) {\n      qrStore.setData(\"\", \"\");\n      return;\n    }\n\n    const generateQR = async () => {\n      try {\n        const [pngUrl, svgStr] = await Promise.all([\n          QRCode.toDataURL(createdQR.shortUrl, {\n            width: 256,\n            margin: 2,\n            errorCorrectionLevel: \"M\",\n          }),\n          QRCode.toString(createdQR.shortUrl, {\n            type: \"svg\",\n            margin: 2,\n            errorCorrectionLevel: \"M\",\n          }),\n        ]);\n        qrStore.setData(pngUrl, svgStr);\n      } catch (err) {\n        console.error(\"Failed to generate QR code:\", err);\n      }\n    };\n\n    generateQR();\n  }, [createdQR?.shortUrl]);\n\n  const handleSubmit = async (e: React.FormEvent) => {\n    e.preventDefault();\n    setError(null);\n    setIsLoading",
+      "tokens": 0,
+      "firstFile": {
+        "name": "app/(dashboard)/qr/new/page.tsx",
+        "start": 68,
+        "end": 103,
+        "startLoc": {
+          "line": 68,
+          "column": 2,
+          "position": 710
+        },
+        "endLoc": {
+          "line": 103,
+          "column": 13,
+          "position": 983
+        }
+      },
+      "secondFile": {
+        "name": "components/qr-create-modal.tsx",
+        "start": 59,
+        "end": 94,
+        "startLoc": {
+          "line": 59,
+          "column": 12,
+          "position": 673
+        },
+        "endLoc": {
+          "line": 94,
+          "column": 15,
+          "position": 946
+        }
+      }
+    },
+    {
+      "format": "tsx",
+      "lines": 15,
+      "fragment": ");\n    setIsLoading(true);\n\n    try {\n      const response = await fetch(\"/api/qr\", {\n        method: \"POST\",\n        headers: { \"Content-Type\": \"application/json\" },\n        body: JSON.stringify({\n          destinationUrl,\n          name: name || undefined,\n          folderId: folderId || undefined,\n        }),\n      });\n\n      const data = await",
+      "tokens": 0,
+      "firstFile": {
+        "name": "app/(dashboard)/qr/new/page.tsx",
+        "start": 102,
+        "end": 116,
+        "startLoc": {
+          "line": 102,
+          "column": 5,
+          "position": 979
+        },
+        "endLoc": {
+          "line": 116,
+          "column": 6,
+          "position": 1086
+        }
+      },
+      "secondFile": {
+        "name": "components/qr-create-modal.tsx",
+        "start": 94,
+        "end": 108,
+        "startLoc": {
+          "line": 94,
+          "column": 2,
+          "position": 950
+        },
+        "endLoc": {
+          "line": 108,
+          "column": 2,
+          "position": 1057
+        }
+      }
+    },
+    {
+      "format": "tsx",
+      "lines": 40,
+      "fragment": "(\"An unexpected error occurred\");\n    } finally {\n      setIsLoading(false);\n    }\n  };\n\n  const handleCopyUrl = async () => {\n    if (!createdQR?.shortUrl) return;\n    try {\n      await navigator.clipboard.writeText(createdQR.shortUrl);\n      setCopied(true);\n      setTimeout(() => setCopied(false), 2000);\n    } catch (err) {\n      console.error(\"Failed to copy:\", err);\n    }\n  };\n\n  const handleDownload = (format: \"png\" | \"svg\") => {\n    if (!createdQR) return;\n\n    const timestamp = Date.now();\n    const filename = `qr-code-${createdQR.shortCode}-${timestamp}.${format}`;\n\n    if (format === \"png\" && qrData.dataUrl) {\n      const link = document.createElement(\"a\");\n      link.download = filename;\n      link.href = qrData.dataUrl;\n      link.click();\n    } else if (format === \"svg\" && qrData.svgString) {\n      const blob = new Blob([qrData.svgString], { type: \"image/svg+xml\" });\n      const url = URL.createObjectURL(blob);\n      const link = document.createElement(\"a\");\n      link.download = filename;\n      link.href = url;\n      link.click();\n      URL.revokeObjectURL(url);\n    }\n  };\n\n  const handleCreateAnother",
+      "tokens": 0,
+      "firstFile": {
+        "name": "app/(dashboard)/qr/new/page.tsx",
+        "start": 129,
+        "end": 168,
+        "startLoc": {
+          "line": 129,
+          "column": 9,
+          "position": 1175
+        },
+        "endLoc": {
+          "line": 168,
+          "column": 20,
+          "position": 1575
+        }
+      },
+      "secondFile": {
+        "name": "components/qr-create-modal.tsx",
+        "start": 145,
+        "end": 184,
+        "startLoc": {
+          "line": 145,
+          "column": 6,
+          "position": 1371
+        },
+        "endLoc": {
+          "line": 184,
+          "column": 12,
+          "position": 1771
+        }
+      }
+    },
+    {
+      "format": "tsx",
+      "lines": 17,
+      "fragment": ">\n                  {copied ? (\n                    <svg className=\"w-5 h-5 text-green-500\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\">\n                      <path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth={2} d=\"M5 13l4 4L19 7\" />\n                    </svg>\n                  ) : (\n                    <svg className=\"w-5 h-5\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\">\n                      <path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth={2} d=\"M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\" />\n                    </svg>\n                  )}\n                </button>\n              </div>\n            </div>\n\n            <div className=\"flex gap-3 justify-center mb-6\">\n              <Button\n                ",
+      "tokens": 0,
+      "firstFile": {
+        "name": "app/(dashboard)/qr/new/page.tsx",
+        "start": 218,
+        "end": 234,
+        "startLoc": {
+          "line": 218,
+          "column": 17,
+          "position": 1965
+        },
+        "endLoc": {
+          "line": 234,
+          "column": 17,
+          "position": 2144
+        }
+      },
+      "secondFile": {
+        "name": "components/qr-create-modal.tsx",
+        "start": 240,
+        "end": 256,
+        "startLoc": {
+          "line": 240,
+          "column": 19,
+          "position": 2213
+        },
+        "endLoc": {
+          "line": 256,
+          "column": 19,
+          "position": 2392
+        }
+      }
+    },
+    {
+      "format": "tsx",
+      "lines": 18,
+      "fragment": ">\n                View Details\n              </Button>\n            </div>\n          </div>\n        ) : (\n          // Creation form\n          <form onSubmit={handleSubmit}>\n            {error && (\n              <div className=\"mb-4 p-3 bg-red-50 border border-red-200 rounded-md text-red-700 text-sm\">\n                {error}\n              </div>\n            )}\n\n            <div className=\"space-y-4\">\n              <div>\n                <label\n                  ",
+      "tokens": 0,
+      "firstFile": {
+        "name": "app/(dashboard)/qr/new/page.tsx",
+        "start": 256,
+        "end": 273,
+        "startLoc": {
+          "line": 256,
+          "column": 15,
+          "position": 2306
+        },
+        "endLoc": {
+          "line": 273,
+          "column": 19,
+          "position": 2402
+        }
+      },
+      "secondFile": {
+        "name": "components/qr-create-modal.tsx",
+        "start": 278,
+        "end": 295,
+        "startLoc": {
+          "line": 278,
+          "column": 17,
+          "position": 2552
+        },
+        "endLoc": {
+          "line": 295,
+          "column": 21,
+          "position": 2648
+        }
+      }
+    },
+    {
+      "format": "tsx",
+      "lines": 15,
+      "fragment": ">\n                    <option value=\"\">No folder</option>\n                    {folders.map((folder) => (\n                      <option key={folder.id} value={folder.id}>\n                        {folder.name}\n                      </option>\n                    ))}\n                  </select>\n                </div>\n              )}\n            </div>\n\n            <div className=\"mt-6 flex gap-3 justify-end\">\n              <Button\n                ",
+      "tokens": 0,
+      "firstFile": {
+        "name": "app/(dashboard)/qr/new/page.tsx",
+        "start": 326,
+        "end": 340,
+        "startLoc": {
+          "line": 326,
+          "column": 19,
+          "position": 2792
+        },
+        "endLoc": {
+          "line": 340,
+          "column": 17,
+          "position": 2896
+        }
+      },
+      "secondFile": {
+        "name": "components/qr-create-modal.tsx",
+        "start": 360,
+        "end": 373,
+        "startLoc": {
+          "line": 360,
+          "column": 21,
+          "position": 3142
+        },
+        "endLoc": {
+          "line": 373,
+          "column": 2,
+          "position": 3246
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 111,
+      "fragment": "={2} d=\"M15 19l-7-7 7-7\" />\n          </svg>\n          Back to Dashboard\n        </Link>\n      </div>\n\n      <div className=\"grid gap-6 lg:grid-cols-3\">\n        {/* Left column - QR code preview */}\n        <div className=\"lg:col-span-1\">\n          <div className=\"bg-white rounded-lg border border-gray-200 p-6 sticky top-6\">\n            {qrData.dataUrl ? (\n              <img\n                src={qrData.dataUrl}\n                alt=\"QR Code\"\n                className=\"w-full aspect-square border rounded-lg mb-4\"\n              />\n            ) : (\n              <div className=\"w-full aspect-square bg-gray-100 rounded-lg mb-4 flex items-center justify-center\">\n                <span className=\"text-gray-400\">Loading...</span>\n              </div>\n            )}\n\n            <div className=\"mb-4\">\n              <p className=\"text-xs text-gray-500 mb-1\">Short URL</p>\n              <div className=\"flex items-center gap-2\">\n                <code className=\"text-sm font-mono text-blue-600 bg-blue-50 px-2 py-1 rounded flex-1 truncate\">\n                  {qrCode.shortUrl}\n                </code>\n                <button\n                  onClick={handleCopyUrl}\n                  className=\"p-1.5 text-gray-400 hover:text-gray-600 flex-shrink-0\"\n                  title=\"Copy URL\"\n                >\n                  {copied ? (\n                    <svg className=\"w-4 h-4 text-green-500\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\">\n                      <path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth={2} d=\"M5 13l4 4L19 7\" />\n                    </svg>\n                  ) : (\n                    <svg className=\"w-4 h-4\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\">\n                      <path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth={2} d=\"M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\" />\n                    </svg>\n                  )}\n                </button>\n              </div>\n            </div>\n\n            <div className=\"flex gap-2\">\n              <Button\n                variant=\"outline\"\n                size=\"sm\"\n                className=\"flex-1\"\n                onClick={() => handleDownload(\"png\")}\n                disabled={!qrData.dataUrl}\n              >\n                PNG\n              </Button>\n              <Button\n                variant=\"outline\"\n                size=\"sm\"\n                className=\"flex-1\"\n                onClick={() => handleDownload(\"svg\")}\n                disabled={!qrData.svgString}\n              >\n                SVG\n              </Button>\n            </div>\n\n            <div className=\"mt-4 pt-4 border-t border-gray-100 text-sm text-gray-500\">\n              <div className=\"flex justify-between mb-1\">\n                <span>Total Scans</span>\n                <span className=\"font-medium text-gray-900\">{qrCode.scanCount}</span>\n              </div>\n              <div className=\"flex justify-between\">\n                <span>Created</span>\n                <span>{formatDate(qrCode.createdAt)}</span>\n              </div>\n            </div>\n          </div>\n        </div>\n\n        {/* Right column - Edit form */}\n        <div className=\"lg:col-span-2\">\n          <div className=\"bg-white rounded-lg border border-gray-200 p-6\">\n            <h1 className=\"text-2xl font-bold text-gray-900 mb-6\">\n              Edit QR Code\n            </h1>\n\n            {error && (\n              <div className=\"mb-4 p-3 bg-red-50 border border-red-200 rounded-md text-red-700 text-sm\">\n                {error}\n              </div>\n            )}\n\n            {success && (\n              <div className=\"mb-4 p-3 bg-green-50 border border-green-200 rounded-md text-green-700 text-sm\">\n                {success}\n              </div>\n            )}\n\n            <div className=\"space-y-4\">\n              <div>\n                <label\n                  htmlFor=\"destinationUrl\"\n                  className=\"block text-sm font-medium text-gray-700 mb-1\"\n                >\n                  Destination URL\n                </label>\n                <Input\n                  id=\"destinationUrl\"\n                  type=\"url\"\n                  value={destinationUrl",
+      "tokens": 0,
+      "firstFile": {
+        "name": "app/(dashboard)/qr/[id]/qr-edit-form.tsx",
+        "start": 225,
+        "end": 335,
+        "startLoc": {
+          "line": 225,
+          "column": 12,
+          "position": 2140
+        },
+        "endLoc": {
+          "line": 335,
+          "column": 15,
+          "position": 2966
+        }
+      },
+      "secondFile": {
+        "name": "components/qr-create-modal.tsx",
+        "start": 212,
+        "end": 272,
+        "startLoc": {
+          "line": 212,
+          "column": 12,
+          "position": 2018
+        },
+        "endLoc": {
+          "line": 272,
+          "column": 12,
+          "position": 2509
+        }
+      }
+    },
+    {
+      "format": "tsx",
+      "lines": 26,
+      "fragment": "[];\n}\n\n// QR code store for managing async generation\nfunction createQRStore() {\n  let snapshot = { dataUrl: \"\", svgString: \"\" };\n  const listeners = new Set<() => void>();\n\n  return {\n    getSnapshot: () => snapshot,\n    subscribe: (listener: () => void) => {\n      listeners.add(listener);\n      return () => listeners.delete(listener);\n    },\n    setData: (png: string, svg: string) => {\n      if (snapshot.dataUrl !== png || snapshot.svgString !== svg) {\n        snapshot = { dataUrl: png, svgString: svg };\n        listeners.forEach((l) => l());\n      }\n    },\n  };\n}\n\nconst qrStore = createQRStore();\n\nexport function QREditForm",
+      "tokens": 0,
+      "firstFile": {
+        "name": "app/(dashboard)/qr/[id]/qr-edit-form.tsx",
+        "start": 33,
+        "end": 58,
+        "startLoc": {
+          "line": 33,
+          "column": 7,
+          "position": 251
+        },
+        "endLoc": {
+          "line": 58,
+          "column": 11,
+          "position": 494
+        }
+      },
+      "secondFile": {
+        "name": "components/qr-create-modal.tsx",
+        "start": 14,
+        "end": 38,
+        "startLoc": {
+          "line": 14,
+          "column": 2,
+          "position": 145
+        },
+        "endLoc": {
+          "line": 38,
+          "column": 12,
+          "position": 353
+        }
+      }
+    },
+    {
+      "format": "tsx",
+      "lines": 14,
+      "fragment": ".shortUrl, {\n            type: \"svg\",\n            margin: 2,\n            errorCorrectionLevel: \"M\",\n          }),\n        ]);\n        qrStore.setData(pngUrl, svgStr);\n      } catch (err) {\n        console.error(\"Failed to generate QR code:\", err);\n      }\n    };\n\n    generateQR();\n  }, [qrCode",
+      "tokens": 0,
+      "firstFile": {
+        "name": "app/(dashboard)/qr/[id]/qr-edit-form.tsx",
+        "start": 89,
+        "end": 102,
+        "startLoc": {
+          "line": 89,
+          "column": 7,
+          "position": 919
+        },
+        "endLoc": {
+          "line": 102,
+          "column": 7,
+          "position": 1010
+        }
+      },
+      "secondFile": {
+        "name": "components/qr-create-modal.tsx",
+        "start": 76,
+        "end": 89,
+        "startLoc": {
+          "line": 76,
+          "column": 10,
+          "position": 808
+        },
+        "endLoc": {
+          "line": 89,
+          "column": 10,
+          "position": 899
+        }
+      }
+    },
+    {
+      "format": "tsx",
+      "lines": 12,
+      "fragment": ";\n        setError(message);\n        setFieldErrors({\n          destinationUrl: getApiFieldError(data, \"destinationUrl\") || undefined,\n          name: getApiFieldError(data, \"name\") || undefined,\n          folderId: getApiFieldError(data, \"folderId\") || undefined,\n        });\n        toast.error(message);\n        return;\n      }\n\n      setSuccess",
+      "tokens": 0,
+      "firstFile": {
+        "name": "app/(dashboard)/qr/[id]/qr-edit-form.tsx",
+        "start": 125,
+        "end": 136,
+        "startLoc": {
+          "line": 125,
+          "column": 27,
+          "position": 1223
+        },
+        "endLoc": {
+          "line": 136,
+          "column": 11,
+          "position": 1311
+        }
+      },
+      "secondFile": {
+        "name": "components/qr-create-modal.tsx",
+        "start": 111,
+        "end": 122,
+        "startLoc": {
+          "line": 111,
+          "column": 27,
+          "position": 1110
+        },
+        "endLoc": {
+          "line": 122,
+          "column": 6,
+          "position": 1198
+        }
+      }
+    },
+    {
+      "format": "tsx",
+      "lines": 10,
+      "fragment": ".shortUrl);\n      setCopied(true);\n      setTimeout(() => setCopied(false), 2000);\n    } catch (err) {\n      console.error(\"Failed to copy:\", err);\n    }\n  };\n\n  const handleDownload = (format: \"png\" | \"svg\") => {\n    const",
+      "tokens": 0,
+      "firstFile": {
+        "name": "app/(dashboard)/qr/[id]/qr-edit-form.tsx",
+        "start": 179,
+        "end": 188,
+        "startLoc": {
+          "line": 179,
+          "column": 7,
+          "position": 1662
+        },
+        "endLoc": {
+          "line": 188,
+          "column": 6,
+          "position": 1746
+        }
+      },
+      "secondFile": {
+        "name": "components/qr-create-modal.tsx",
+        "start": 154,
+        "end": 163,
+        "startLoc": {
+          "line": 154,
+          "column": 10,
+          "position": 1443
+        },
+        "endLoc": {
+          "line": 163,
+          "column": 3,
+          "position": 1527
+        }
+      }
+    },
+    {
+      "format": "tsx",
+      "lines": 19,
+      "fragment": ".shortCode}-${timestamp}.${format}`;\n\n    if (format === \"png\" && qrData.dataUrl) {\n      const link = document.createElement(\"a\");\n      link.download = filename;\n      link.href = qrData.dataUrl;\n      link.click();\n    } else if (format === \"svg\" && qrData.svgString) {\n      const blob = new Blob([qrData.svgString], { type: \"image/svg+xml\" });\n      const url = URL.createObjectURL(blob);\n      const link = document.createElement(\"a\");\n      link.download = filename;\n      link.href = url;\n      link.click();\n      URL.revokeObjectURL(url);\n    }\n  };\n\n  const formatDate",
+      "tokens": 0,
+      "firstFile": {
+        "name": "app/(dashboard)/qr/[id]/qr-edit-form.tsx",
+        "start": 189,
+        "end": 207,
+        "startLoc": {
+          "line": 189,
+          "column": 7,
+          "position": 1769
+        },
+        "endLoc": {
+          "line": 207,
+          "column": 11,
+          "position": 1978
+        }
+      },
+      "secondFile": {
+        "name": "components/qr-create-modal.tsx",
+        "start": 166,
+        "end": 184,
+        "startLoc": {
+          "line": 166,
+          "column": 10,
+          "position": 1562
+        },
+        "endLoc": {
+          "line": 184,
+          "column": 12,
+          "position": 1771
+        }
+      }
+    },
+    {
+      "format": "tsx",
+      "lines": 14,
+      "fragment": ">\n      <div className=\"mb-6\">\n        <Link\n          href=\"/dashboard\"\n          className=\"text-sm text-gray-500 hover:text-gray-700 flex items-center gap-1\"\n        >\n          <svg className=\"w-4 h-4\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\">\n            <path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth={2} d=\"M15 19l-7-7 7-7\" />\n          </svg>\n          Back to Dashboard\n        </Link>\n      </div>\n\n      <div className=\"grid gap-6 lg:grid-cols-3",
+      "tokens": 0,
+      "firstFile": {
+        "name": "app/(dashboard)/qr/[id]/qr-edit-form.tsx",
+        "start": 218,
+        "end": 231,
+        "startLoc": {
+          "line": 218,
+          "column": 4,
+          "position": 2063
+        },
+        "endLoc": {
+          "line": 231,
+          "column": 26,
+          "position": 2183
+        }
+      },
+      "secondFile": {
+        "name": "app/(dashboard)/qr/new/page.tsx",
+        "start": 177,
+        "end": 190,
+        "startLoc": {
+          "line": 177,
+          "column": 2,
+          "position": 1645
+        },
+        "endLoc": {
+          "line": 190,
+          "column": 47,
+          "position": 1765
+        }
+      }
+    },
+    {
+      "format": "tsx",
+      "lines": 8,
+      "fragment": ">\n                  {copied ? (\n                    <svg className=\"w-4 h-4 text-green-500\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\">\n                      <path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth={2} d=\"M5 13l4 4L19 7\" />\n                    </svg>\n                  ) : (\n                    <svg className=\"w-4 h-4\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\">\n                      <path ",
+      "tokens": 0,
+      "firstFile": {
+        "name": "app/(dashboard)/qr/[id]/qr-edit-form.tsx",
+        "start": 257,
+        "end": 264,
+        "startLoc": {
+          "line": 257,
+          "column": 17,
+          "position": 2378
+        },
+        "endLoc": {
+          "line": 264,
+          "column": 2,
+          "position": 2491
+        }
+      },
+      "secondFile": {
+        "name": "components/qr-card.tsx",
+        "start": 78,
+        "end": 86,
+        "startLoc": {
+          "line": 78,
+          "column": 13,
+          "position": 565
+        },
+        "endLoc": {
+          "line": 86,
+          "column": 21,
+          "position": 678
+        }
+      }
+    },
+    {
+      "format": "tsx",
+      "lines": 9,
+      "fragment": "\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\">\n                      <path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth={2} d=\"M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\" />\n                    </svg>\n                  )}\n                </button>\n              </div>\n            </div>\n\n            <div className=\"flex gap-2",
+      "tokens": 0,
+      "firstFile": {
+        "name": "app/(dashboard)/qr/[id]/qr-edit-form.tsx",
+        "start": 263,
+        "end": 271,
+        "startLoc": {
+          "line": 263,
+          "column": 8,
+          "position": 2467
+        },
+        "endLoc": {
+          "line": 271,
+          "column": 11,
+          "position": 2550
+        }
+      },
+      "secondFile": {
+        "name": "components/qr-create-modal.tsx",
+        "start": 246,
+        "end": 254,
+        "startLoc": {
+          "line": 246,
+          "column": 8,
+          "position": 2302
+        },
+        "endLoc": {
+          "line": 254,
+          "column": 31,
+          "position": 2385
+        }
+      }
+    },
+    {
+      "format": "tsx",
+      "lines": 19,
+      "fragment": "</label>\n                  <select\n                    id=\"folder\"\n                    value={folderId}\n                    onChange={(e) => setFolderId(e.target.value)}\n                    className=\"w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500\"\n                    disabled={isSaving}\n                  >\n                    <option value=\"\">No folder</option>\n                    {folders.map((folder) => (\n                      <option key={folder.id} value={folder.id}>\n                        {folder.name}\n                      </option>\n                    ))}\n                  </select>\n                </div>\n              )}\n\n              <",
+      "tokens": 0,
+      "firstFile": {
+        "name": "app/(dashboard)/qr/[id]/qr-edit-form.tsx",
+        "start": 381,
+        "end": 399,
+        "startLoc": {
+          "line": 381,
+          "column": 19,
+          "position": 3276
+        },
+        "endLoc": {
+          "line": 399,
+          "column": 2,
+          "position": 3413
+        }
+      },
+      "secondFile": {
+        "name": "app/(dashboard)/qr/new/page.tsx",
+        "start": 319,
+        "end": 370,
+        "startLoc": {
+          "line": 319,
+          "column": 19,
+          "position": 2741
+        },
+        "endLoc": {
+          "line": 370,
+          "column": 3,
+          "position": 3227
+        }
+      }
+    },
+    {
+      "format": "typescript",
+      "lines": 15,
+      "fragment": "export async function POST(request: NextRequest) {\n  const session = await auth();\n\n  if (!session?.user?.id) {\n    return NextResponse.json({ error: \"Unauthorized\" }, { status: 401 });\n  }\n\n  let body;\n  try {\n    body = await request.json();\n  } catch {\n    return NextResponse.json({ error: \"Invalid JSON body\" }, { status: 400 });\n  }\n\n  // Validate request body",
+      "tokens": 0,
+      "firstFile": {
+        "name": "app/api/tags/route.ts",
+        "start": 36,
+        "end": 50,
+        "startLoc": {
+          "line": 36,
+          "column": 1,
+          "position": 316
+        },
+        "endLoc": {
+          "line": 50,
+          "column": 25,
+          "position": 460
+        }
+      },
+      "secondFile": {
+        "name": "app/api/stripe/checkout/route.ts",
+        "start": 15,
+        "end": 29,
+        "startLoc": {
+          "line": 15,
+          "column": 1,
+          "position": 151
+        },
+        "endLoc": {
+          "line": 29,
+          "column": 6,
+          "position": 295
+        }
+      }
+    },
+    {
+      "format": "typescript",
+      "lines": 9,
+      "fragment": ".safeParse(body);\n  if (!result.success) {\n    return NextResponse.json(\n      { error: \"Validation failed\", details: result.error.flatten() },\n      { status: 400 }\n    );\n  }\n\n  const { destinationUrl, name, folderId }",
+      "tokens": 0,
+      "firstFile": {
+        "name": "app/api/qr/route.ts",
+        "start": 131,
+        "end": 139,
+        "startLoc": {
+          "line": 131,
+          "column": 15,
+          "position": 1240
+        },
+        "endLoc": {
+          "line": 139,
+          "column": 2,
+          "position": 1321
+        }
+      },
+      "secondFile": {
+        "name": "app/api/qr/[id]/route.ts",
+        "start": 90,
+        "end": 98,
+        "startLoc": {
+          "line": 90,
+          "column": 15,
+          "position": 905
+        },
+        "endLoc": {
+          "line": 98,
+          "column": 2,
+          "position": 985
+        }
+      }
+    },
+    {
+      "format": "typescript",
+      "lines": 16,
+      "fragment": "export async function POST(request: NextRequest) {\n  const session = await auth();\n\n  if (!session?.user?.id) {\n    return NextResponse.json({ error: \"Unauthorized\" }, { status: 401 });\n  }\n\n  let body;\n  try {\n    body = await request.json();\n  } catch {\n    return NextResponse.json({ error: \"Invalid JSON body\" }, { status: 400 });\n  }\n\n  // Validate request body\n  const result = createFolderSchema",
+      "tokens": 0,
+      "firstFile": {
+        "name": "app/api/folders/route.ts",
+        "start": 48,
+        "end": 63,
+        "startLoc": {
+          "line": 48,
+          "column": 1,
+          "position": 405
+        },
+        "endLoc": {
+          "line": 63,
+          "column": 19,
+          "position": 558
+        }
+      },
+      "secondFile": {
+        "name": "app/api/stripe/checkout/route.ts",
+        "start": 15,
+        "end": 51,
+        "startLoc": {
+          "line": 15,
+          "column": 1,
+          "position": 151
+        },
+        "endLoc": {
+          "line": 51,
+          "column": 16,
+          "position": 469
+        }
+      }
+    },
+    {
+      "format": "typescript",
+      "lines": 11,
+      "fragment": ".safeParse(body);\n  if (!result.success) {\n    return NextResponse.json(\n      { error: \"Validation failed\", details: result.error.flatten() },\n      { status: 400 }\n    );\n  }\n\n  const { name } = result.data;\n\n  // Create folder",
+      "tokens": 0,
+      "firstFile": {
+        "name": "app/api/folders/route.ts",
+        "start": 63,
+        "end": 73,
+        "startLoc": {
+          "line": 63,
+          "column": 19,
+          "position": 559
+        },
+        "endLoc": {
+          "line": 73,
+          "column": 17,
+          "position": 645
+        }
+      },
+      "secondFile": {
+        "name": "app/api/tags/route.ts",
+        "start": 51,
+        "end": 61,
+        "startLoc": {
+          "line": 51,
+          "column": 16,
+          "position": 470
+        },
+        "endLoc": {
+          "line": 61,
+          "column": 14,
+          "position": 556
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 93,
+      "fragment": "(e.target.value)}\n              placeholder=\"Enter your password\"\n              required\n              disabled={isLoading}\n            />\n          </div>\n\n          <Button\n            type=\"submit\"\n            variant=\"primary\"\n            className=\"w-full\"\n            disabled={isLoading}\n          >\n            {isLoading ? \"Signing in...\" : \"Sign in\"}\n          </Button>\n        </form>\n\n        <div className=\"mt-6\">\n          <div className=\"relative\">\n            <div className=\"absolute inset-0 flex items-center\">\n              <div className=\"w-full border-t border-gray-300\" />\n            </div>\n            <div className=\"relative flex justify-center text-sm\">\n              <span className=\"px-2 bg-white text-gray-500\">\n                Or continue with\n              </span>\n            </div>\n          </div>\n\n          <button\n            onClick={handleGoogleSignIn}\n            disabled={isLoading}\n            className=\"mt-4 w-full flex items-center justify-center gap-3 px-4 py-2 border border-gray-300 rounded-lg bg-white text-gray-700 hover:bg-gray-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed\"\n          >\n            <svg className=\"w-5 h-5\" viewBox=\"0 0 24 24\">\n              <path\n                fill=\"currentColor\"\n                d=\"M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z\"\n              />\n              <path\n                fill=\"currentColor\"\n                d=\"M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z\"\n              />\n              <path\n                fill=\"currentColor\"\n                d=\"M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z\"\n              />\n              <path\n                fill=\"currentColor\"\n                d=\"M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z\"\n              />\n            </svg>\n            Sign in with Google\n          </button>\n        </div>\n\n        <p className=\"mt-6 text-center text-sm text-gray-600\">\n          Don&apos;t have an account?{\" \"}\n          <Link\n            href=\"/signup\"\n            className=\"font-medium text-blue-600 hover:text-blue-500\"\n          >\n            Sign up\n          </Link>\n        </p>\n      </div>\n    </div>\n  );\n}\n\nfunction getErrorMessage(error: string | null): string {\n  switch (error) {\n    case \"CredentialsSignin\":\n      return \"Invalid email or password\";\n    case \"OAuthAccountNotLinked\":\n      return \"This email is already associated with another account\";\n    default:\n      return \"An error occurred during sign in\";\n  }\n}\n\nexport default function LoginPage() {\n  return (\n    <Suspense\n      fallback={\n        <div className=\"w-full max-w-md\">\n          <div className=\"bg-white rounded-lg shadow-md p-8 animate-pulse\">\n            <div className=\"h-8 bg-gray-200 rounded w-3/4 mx-auto mb-6\" />\n            <div className=\"space-y-4\">\n              <div className=\"h-10 bg-gray-200 rounded\" />\n              <div className=\"h-10 bg-gray-200 rounded\" />\n              <div className=\"h-10 bg-gray-200 rounded\" />\n            ",
+      "tokens": 0,
+      "firstFile": {
+        "name": "app/(auth)/login/page.tsx",
+        "start": 93,
+        "end": 185,
+        "startLoc": {
+          "line": 93,
+          "column": 12,
+          "position": 712
+        },
+        "endLoc": {
+          "line": 185,
+          "column": 13,
+          "position": 1272
+        }
+      },
+      "secondFile": {
+        "name": "app/(auth)/signup/page.tsx",
+        "start": 147,
+        "end": 319,
+        "startLoc": {
+          "line": 147,
+          "column": 8,
+          "position": 1223
+        },
+        "endLoc": {
+          "line": 319,
+          "column": 15,
+          "position": 2311
+        }
+      }
+    },
+    {
+      "format": "tsx",
+      "lines": 14,
+      "fragment": "(\"An unexpected error occurred\");\n    } finally {\n      setIsLoading(false);\n    }\n  };\n\n  const handleGoogleSignIn = () => {\n    signIn(\"google\", { callbackUrl });\n  };\n\n  return (\n    <div className=\"w-full max-w-md\">\n      <div className=\"bg-white rounded-lg shadow-md p-8\">\n        <h1 className=\"text-2xl font-bold text-center text-gray-900 mb-6",
+      "tokens": 0,
+      "firstFile": {
+        "name": "app/(auth)/login/page.tsx",
+        "start": 40,
+        "end": 53,
+        "startLoc": {
+          "line": 40,
+          "column": 13,
+          "position": 376
+        },
+        "endLoc": {
+          "line": 53,
+          "column": 50,
+          "position": 470
+        }
+      },
+      "secondFile": {
+        "name": "app/(auth)/signup/page.tsx",
+        "start": 101,
+        "end": 114,
+        "startLoc": {
+          "line": 101,
+          "column": 9,
+          "position": 873
+        },
+        "endLoc": {
+          "line": 114,
+          "column": 50,
+          "position": 967
+        }
+      }
+    },
+    {
+      "format": "tsx",
+      "lines": 40,
+      "fragment": "}\n          </Button>\n        </form>\n\n        <div className=\"mt-6\">\n          <div className=\"relative\">\n            <div className=\"absolute inset-0 flex items-center\">\n              <div className=\"w-full border-t border-gray-300\" />\n            </div>\n            <div className=\"relative flex justify-center text-sm\">\n              <span className=\"px-2 bg-white text-gray-500\">\n                Or continue with\n              </span>\n            </div>\n          </div>\n\n          <button\n            onClick={handleGoogleSignIn}\n            disabled={isLoading}\n            className=\"mt-4 w-full flex items-center justify-center gap-3 px-4 py-2 border border-gray-300 rounded-lg bg-white text-gray-700 hover:bg-gray-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed\"\n          >\n            <svg className=\"w-5 h-5\" viewBox=\"0 0 24 24\">\n              <path\n                fill=\"currentColor\"\n                d=\"M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z\"\n              />\n              <path\n                fill=\"currentColor\"\n                d=\"M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z\"\n              />\n              <path\n                fill=\"currentColor\"\n                d=\"M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z\"\n              />\n              <path\n                fill=\"currentColor\"\n                d=\"M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z\"\n              />\n            </svg>\n            Sign in",
+      "tokens": 0,
+      "firstFile": {
+        "name": "app/(auth)/login/page.tsx",
+        "start": 106,
+        "end": 145,
+        "startLoc": {
+          "line": 106,
+          "column": 10,
+          "position": 784
+        },
+        "endLoc": {
+          "line": 145,
+          "column": 3,
+          "position": 1013
+        }
+      },
+      "secondFile": {
+        "name": "app/(auth)/signup/page.tsx",
+        "start": 251,
+        "end": 290,
+        "startLoc": {
+          "line": 251,
+          "column": 10,
+          "position": 1893
+        },
+        "endLoc": {
+          "line": 290,
+          "column": 3,
+          "position": 2122
+        }
+      }
+    },
+    {
+      "format": "tsx",
+      "lines": 14,
+      "fragment": "\"\n                className=\"flex items-center gap-3 px-3 py-2 text-gray-700 rounded-lg hover:bg-gray-100 transition-colors\"\n              >\n                <svg\n                  className=\"w-5 h-5\"\n                  fill=\"none\"\n                  stroke=\"currentColor\"\n                  viewBox=\"0 0 24 24\"\n                >\n                  <path\n                    strokeLinecap=\"round\"\n                    strokeLinejoin=\"round\"\n                    strokeWidth={2}\n                    d=\"M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z",
+      "tokens": 0,
+      "firstFile": {
+        "name": "app/(dashboard)/layout.tsx",
+        "start": 51,
+        "end": 64,
+        "startLoc": {
+          "line": 51,
+          "column": 9,
+          "position": 329
+        },
+        "endLoc": {
+          "line": 64,
+          "column": 87,
+          "position": 394
+        }
+      },
+      "secondFile": {
+        "name": "app/(dashboard)/layout.tsx",
+        "start": 30,
+        "end": 43,
+        "startLoc": {
+          "line": 30,
+          "column": 11,
+          "position": 224
+        },
+        "endLoc": {
+          "line": 43,
+          "column": 261,
+          "position": 289
+        }
+      }
+    },
+    {
+      "format": "tsx",
+      "lines": 14,
+      "fragment": "\"\n                className=\"flex items-center gap-3 px-3 py-2 text-gray-700 rounded-lg hover:bg-gray-100 transition-colors\"\n              >\n                <svg\n                  className=\"w-5 h-5\"\n                  fill=\"none\"\n                  stroke=\"currentColor\"\n                  viewBox=\"0 0 24 24\"\n                >\n                  <path\n                    strokeLinecap=\"round\"\n                    strokeLinejoin=\"round\"\n                    strokeWidth={2}\n                    d=\"M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z",
+      "tokens": 0,
+      "firstFile": {
+        "name": "app/(dashboard)/layout.tsx",
+        "start": 72,
+        "end": 85,
+        "startLoc": {
+          "line": 72,
+          "column": 10,
+          "position": 430
+        },
+        "endLoc": {
+          "line": 85,
+          "column": 484,
+          "position": 495
+        }
+      },
+      "secondFile": {
+        "name": "app/(dashboard)/layout.tsx",
+        "start": 30,
+        "end": 43,
+        "startLoc": {
+          "line": 30,
+          "column": 11,
+          "position": 224
+        },
+        "endLoc": {
+          "line": 43,
+          "column": 261,
+          "position": 289
+        }
+      }
+    },
+    {
+      "format": "tsx",
+      "lines": 14,
+      "fragment": ") {\n  return (\n    <div className=\"min-h-screen bg-gray-50\">\n      <header className=\"bg-white border-b border-gray-200\">\n        <nav className=\"max-w-6xl mx-auto px-4 sm:px-6 lg:px-8\">\n          <div className=\"flex justify-between items-center h-16\">\n            <Link href=\"/\" className=\"text-xl font-bold text-gray-900\">\n              Simple QR\n            </Link>\n            <div className=\"flex items-center gap-6\">\n              <Link href=\"/pricing\" className=\"text-gray-600 hover:text-gray-900\">\n                Pricing\n              </Link>\n              <Link ",
+      "tokens": 0,
+      "firstFile": {
+        "name": "app/page.tsx",
+        "start": 4,
+        "end": 17,
+        "startLoc": {
+          "line": 4,
+          "column": 2,
+          "position": 31
+        },
+        "endLoc": {
+          "line": 17,
+          "column": 2,
+          "position": 150
+        }
+      },
+      "secondFile": {
+        "name": "app/(marketing)/layout.tsx",
+        "start": 3,
+        "end": 17,
+        "startLoc": {
+          "line": 3,
+          "column": 2,
+          "position": 35
+        },
+        "endLoc": {
+          "line": 17,
+          "column": 17,
+          "position": 154
+        }
+      }
+    },
+    {
+      "format": "tsx",
+      "lines": 15,
+      "fragment": "\">\n        <div className=\"max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8\">\n          <div className=\"flex justify-between items-center\">\n            <p className=\"text-gray-500 text-sm\">Simple QR - No hostage codes.</p>\n            <div className=\"flex gap-6 text-sm text-gray-500\">\n              <Link href=\"/pricing\" className=\"hover:text-gray-900\">\n                Pricing\n              </Link>\n            </div>\n          </div>\n        </div>\n      </footer>\n    </div>\n  );\n}",
+      "tokens": 0,
+      "firstFile": {
+        "name": "app/page.tsx",
+        "start": 151,
+        "end": 165,
+        "startLoc": {
+          "line": 151,
+          "column": 34,
+          "position": 1464
+        },
+        "endLoc": {
+          "line": 165,
+          "column": 2,
+          "position": 1580
+        }
+      },
+      "secondFile": {
+        "name": "app/(marketing)/layout.tsx",
+        "start": 33,
+        "end": 49,
+        "startLoc": {
+          "line": 33,
+          "column": 42,
+          "position": 246
+        },
+        "endLoc": {
+          "line": 49,
+          "column": 2,
+          "position": 366
+        }
+      }
+    }
+  ]
+}

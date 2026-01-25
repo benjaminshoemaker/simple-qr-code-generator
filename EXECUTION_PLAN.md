@@ -769,10 +769,10 @@ Human must complete before agents begin:
 
 Human must complete before agents begin:
 
-- [ ] Create Google Safe Browsing API key at console.cloud.google.com
-- [ ] Add GOOGLE_SAFE_BROWSING_API_KEY to Vercel env vars
-- [ ] Set up Vercel KV for rate limiting (or Upstash Redis)
-- [ ] Add KV_REST_API_URL and KV_REST_API_TOKEN to env vars
+- [x] Create Google Safe Browsing API key at console.cloud.google.com
+- [x] Add GOOGLE_SAFE_BROWSING_API_KEY to Vercel env vars
+- [x] Set up Vercel KV for rate limiting (or Upstash Redis)
+- [x] Add REDIS_URL (Upstash/Redis) or KV_REST_API_URL + KV_REST_API_TOKEN to env vars
 
 ---
 
@@ -940,11 +940,11 @@ Human must complete before agents begin:
 **Manual Verification:**
 - [x] Analytics show scan data correctly
 - [x] CSV export downloads valid file
-- [ ] Rate limiting works (hit endpoint 100+ times rapidly)
-- [ ] Malicious URL rejected (test with known bad URL)
+- [x] Rate limiting works (hit endpoint 100+ times rapidly)
+- [x] Malicious URL rejected (test with known bad URL)
 - [x] Error states display properly
 - [x] Settings page allows updates
-- [ ] Full user journey works: signup → subscribe → create QR → scan → view analytics
+- [x] Full user journey works: signup → subscribe → create QR → scan → view analytics
 
 ---
 

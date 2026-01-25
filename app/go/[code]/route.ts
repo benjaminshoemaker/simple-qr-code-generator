@@ -5,7 +5,7 @@ import { eq } from "drizzle-orm";
 import { isBot, hashIP, logScanEvent } from "@/lib/analytics";
 import { limitRedirectByIp } from "@/lib/ratelimit";
 
-export const runtime = "edge";
+export const runtime = "nodejs";
 
 interface RouteContext {
   params: Promise<{ code: string }>;

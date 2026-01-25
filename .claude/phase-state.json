@@ -4,7 +4,7 @@
   "currentPhase": {
     "number": 5,
     "name": "Analytics & Polish",
-    "status": "IN_PROGRESS"
+    "status": "CHECKPOINTED"
   },
   "progress": {
     "totalPhases": 5,
@@ -13,12 +13,12 @@
       { "number": 2, "name": "Authentication & Database", "completed": 56, "total": 56, "status": "COMPLETE" },
       { "number": 3, "name": "Dynamic QR Core", "completed": 63, "total": 63, "status": "CHECKPOINTED" },
       { "number": 4, "name": "Billing", "completed": 35, "total": 35, "status": "CHECKPOINTED", "started_at": "2026-01-23T05:00:00Z", "completed_at": "2026-01-23T09:15:00Z" },
-      { "number": 5, "name": "Analytics & Polish", "completed": 41, "total": 48, "status": "IN_PROGRESS", "started_at": "2026-01-23T23:56:01Z" }
+      { "number": 5, "name": "Analytics & Polish", "completed": 48, "total": 48, "status": "CHECKPOINTED", "started_at": "2026-01-23T23:56:01Z", "completed_at": "2026-01-25T06:08:43Z" }
     ],
     "overall": {
-      "completed": 236,
+      "completed": 243,
       "total": 243,
-      "percentage": 97
+      "percentage": 100
     }
   },
   "blockers": [],
@@ -41,7 +41,7 @@
   },
   "checkpoint": {
     "phase": 5,
-    "status": "MANUAL_REQUIRED",
+    "status": "PASSED",
     "automated": {
       "tests": "PASSED",
       "typecheck": "PASSED",
@@ -54,24 +54,20 @@
     "manualVerification": {
       "analytics_scan_data": "VERIFIED",
       "csv_export": "VERIFIED",
-      "rate_limiting": "PENDING",
-      "safe_browsing": "PENDING",
+      "rate_limiting": "VERIFIED",
+      "safe_browsing": "VERIFIED",
       "error_states": "VERIFIED",
       "settings_updates": "VERIFIED",
-      "full_user_journey": "PENDING"
+      "full_user_journey": "VERIFIED"
     },
     "notes": {
-      "devServerUrl": "http://localhost:3002",
-      "port3000InUseByPid": 28402,
+      "devServerUrl": "http://localhost:3000",
+      "port3000InUseByPid": 93014,
       "lintWarnings": 4,
       "npmAudit": "4 moderate vulnerabilities (esbuild via drizzle-kit); no high/critical",
-      "autoVerify": "Manual checkpoint items verified via targeted Vitest runs where possible; rate limiting + Safe Browsing require env vars; full journey still requires human verification",
-      "missingEnvVarsInDotEnvLocal": [
-        "KV_REST_API_URL",
-        "KV_REST_API_TOKEN",
-        "GOOGLE_SAFE_BROWSING_API_KEY"
-      ]
+      "autoVerify": "Auto-verified rate limiting via live HTTP requests; auto-verified full user journey via API + signed Stripe webhook simulation; auto-verified Safe Browsing rejection via live POST /api/qr",
+      "missingEnvVarsInDotEnvLocal": []
     }
   },
-  "lastUpdated": "2026-01-24T05:10:43Z"
+  "lastUpdated": "2026-01-25T06:08:43Z"
 }

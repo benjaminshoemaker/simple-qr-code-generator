@@ -1,26 +1,4 @@
 {
-  "schema_version": "1.0",
-  "toolkit_location": "/Users/coding/Projects/ai_coding_project_base",
-  "toolkit_commit": "19cbf39e041ccdb3428cb08a163387b06fdb7674",
-  "toolkit_commit_date": "2026-01-23T21:34:43Z",
-  "last_sync": "2026-01-23T21:34:43Z",
-  "files": {
-    "skills/fresh-start/SKILL.md": "4612171d23faf7923562f23b6196b66af7b3b7788f6d4cfcf3b7127a1d0257f9",
-    "skills/phase-prep/SKILL.md": "c36a5504d424b6a65d190b770f10fc1804da7e3e90c743f2bdb5bea98f118eea",
-    "skills/phase-start/SKILL.md": "8fe4467620857cfbc68980054e20cdb490ff9f5100488a0b68d226f551cd083b",
-    "skills/phase-checkpoint/SKILL.md": "de25f3357a9ede6d0a678dd1b23d142be9f047e57b052dab6e393b233467de60",
-    "skills/verify-task/SKILL.md": "79eb56d8aabf52c1523489cafaa215c6cc4025c92db9be9210394496b96c8c68",
-    "skills/configure-verification/SKILL.md": "2442cd78e88f052989138e59dd17dc0881de83ec672851b3a8bddff53b11a202",
-    "skills/progress/SKILL.md": "4910904fa501d3c4c50fbc633b6f36f2b0d5b31f2b6528245c79528726f63338",
-    "skills/populate-state/SKILL.md": "38bcd6b151b913c2f74ac8fa009a0f07970b83e41ad0f197231b256b109c6a68",
-    "skills/list-todos/SKILL.md": "2a466de9979fd28950a59c6a68a01bf65cdacc50a6ee5c6a25bbef487683f8dd",
-    "skills/security-scan/SKILL.md": "9145f4ad74bc31a6efaf8c68dbda8e221866215e6ac568c15569470bc844b470",
-    "skills/criteria-audit/SKILL.md": "cef478b00f0dd0793b54470dabd434c2d61ec90b8f35271560b79d1411bdbfab",
-    "skills/code-verification/SKILL.md": "ccc0c0abf320c00f522aa3297892d1512c75f3dd821c6617fc93737d7729a75b",
-    "skills/spec-verification/SKILL.md": "454c7b70433a9902e4e0d536d8cabfeabc7149da3f6addfa1dadeca5cfaa824d",
-    "skills/browser-verification/SKILL.md": "cb04467a470b73bd684c7625f43338d4198cb0b06731a5a1bf58ea2d6034b1cf",
-    "skills/tech-debt-check/SKILL.md": "27d52cfc1a5d075a5d201aab2b97e833dae83a36b8fcbb48d30bf4e181e9c327",
-    "skills/auto-verify/SKILL.md": "6ba33626531fa391a1e64e0dc7e530fff0e47ff28bd6ba8d33822c8d3be2e13d",
-    "skills/update-target-projects/SKILL.md": "52cc336c2714e84187edf2eb8809d1538e32763071c2a266f0aa7dccb9797e3a"
-  }
+  "toolkit_commit": "6af69b59b96c7b07be95ec2a83e53a0af804e832",
+  "last_sync": "2026-01-24T23:58:48Z"
 }
