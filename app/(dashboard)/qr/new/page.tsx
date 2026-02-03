@@ -4,8 +4,10 @@ import { useState, useEffect, useSyncExternalStore } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { QrCreateForm } from "@/components/qr/qr-create-form";
 import QRCode from "qrcode";
+import { buildQrFilename, QrDownloadFormat } from "@/lib/qr-format";
+import { QrCreateFieldErrors, validateQrCreate } from "@/lib/qr-validation";
 
 // QR code store for managing async generation
 function createQRStore() {
@@ -42,6 +44,7 @@ export default function CreateQRPage() {
   const [folders, setFolders] = useState<Folder[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [fieldErrors, setFieldErrors] = useState<QrCreateFieldErrors>({});
   const [createdQR, setCreatedQR] = useState<{
     id: string;
     shortCode: string;
@@ -100,9 +103,18 @@ export default function CreateQRPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError(null);
+    setFieldErrors({});
     setIsLoading(true);
 
     try {
+      const validationErrors = validateQrCreate(destinationUrl);
+      if (Object.keys(validationErrors).length > 0) {
+        setFieldErrors(validationErrors);
+        setError("Please fix the highlighted fields");
+        setIsLoading(false);
+        return;
+      }
+
       const response = await fetch("/api/qr", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -143,11 +155,11 @@ export default function CreateQRPage() {
     }
   };
 
-  const handleDownload = (format: "png" | "svg") => {
+  const handleDownload = (format: QrDownloadFormat) => {
     if (!createdQR) return;
 
     const timestamp = Date.now();
-    const filename = `qr-code-${createdQR.shortCode}-${timestamp}.${format}`;
+    const filename = buildQrFilename(createdQR.shortCode, timestamp, format);
 
     if (format === "png" && qrData.dataUrl) {
       const link = document.createElement("a");
@@ -259,96 +271,22 @@ export default function CreateQRPage() {
             </div>
           </div>
         ) : (
-          // Creation form
-          <form onSubmit={handleSubmit}>
-            {error && (
-              <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-md text-red-700 text-sm">
-                {error}
-              </div>
-            )}
-
-            <div className="space-y-4">
-              <div>
-                <label
-                  htmlFor="destinationUrl"
-                  className="block text-sm font-medium text-gray-700 mb-1"
-                >
-                  Destination URL <span className="text-red-500">*</span>
-                </label>
-                <Input
-                  id="destinationUrl"
-                  type="url"
-                  value={destinationUrl}
-                  onChange={(e) => setDestinationUrl(e.target.value)}
-                  placeholder="https://example.com"
-                  required
-                  disabled={isLoading}
-                />
-                <p className="mt-1 text-xs text-gray-500">
-                  The URL where your QR code will redirect to
-                </p>
-              </div>
-
-              <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium text-gray-700 mb-1"
-                >
-                  Name <span className="text-gray-400">(optional)</span>
-                </label>
-                <Input
-                  id="name"
-                  type="text"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  placeholder="My QR Code"
-                  disabled={isLoading}
-                />
-                <p className="mt-1 text-xs text-gray-500">
-                  A friendly name to help you identify this QR code
-                </p>
-              </div>
-
-              {folders.length > 0 && (
-                <div>
-                  <label
-                    htmlFor="folder"
-                    className="block text-sm font-medium text-gray-700 mb-1"
-                  >
-                    Folder <span className="text-gray-400">(optional)</span>
-                  </label>
-                  <select
-                    id="folder"
-                    value={folderId}
-                    onChange={(e) => setFolderId(e.target.value)}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    disabled={isLoading}
-                  >
-                    <option value="">No folder</option>
-                    {folders.map((folder) => (
-                      <option key={folder.id} value={folder.id}>
-                        {folder.name}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-              )}
-            </div>
-
-            <div className="mt-6 flex gap-3 justify-end">
-              <Button
-                type="button"
-                variant="outline"
-                onClick={() => router.push("/dashboard")}
-                disabled={isLoading}
-              >
-                Cancel
-              </Button>
-              <Button type="submit" variant="primary" disabled={isLoading}>
-                {isLoading ? "Creating..." : "Create QR Code"}
-              </Button>
-            </div>
-          </form>
+          <QrCreateForm
+            destinationUrl={destinationUrl}
+            name={name}
+            folderId={folderId}
+            folders={folders}
+            isLoading={isLoading}
+            error={error}
+            fieldErrors={fieldErrors}
+            submitLabel="Create QR Code"
+            cancelLabel="Cancel"
+            onSubmit={handleSubmit}
+            onCancel={() => router.push("/dashboard")}
+            onDestinationUrlChange={setDestinationUrl}
+            onNameChange={setName}
+            onFolderChange={setFolderId}
+          />
         )}
       </div>
     </div>

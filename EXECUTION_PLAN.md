@@ -930,6 +930,75 @@ Human must complete before agents begin:
 
 ---
 
+### Step 5.4: Tech Debt Cleanup
+
+#### Task 5.4.A: Split QR Edit Form
+
+**What:** Break the QR edit form into smaller components and extract formatting helpers.
+
+**Acceptance Criteria:**
+- [x] QREditForm renders preview panel and edit form using extracted components
+- [x] Preview panel and delete modal live in dedicated component files
+- [x] QR date/filename formatting extracted to helper with unit tests
+
+**Files:**
+- Create: `components/qr/qr-preview-panel.tsx` — QR preview/short URL panel
+- Create: `components/qr/qr-delete-modal.tsx` — delete confirmation modal
+- Create: `lib/qr-format.ts` — date/filename formatting helpers
+- Modify: `app/(dashboard)/qr/[id]/qr-edit-form.tsx` — use extracted components/helpers
+- Create: `tests/lib/qr-format.test.ts` — helper unit tests
+
+**Depends On:** Task 5.3.B
+
+**Spec Reference:** Core User Experience - Dynamic QR Code
+
+---
+
+#### Task 5.4.B: Split QR Create Flow
+
+**What:** Extract shared QR create form components and validation.
+
+**Acceptance Criteria:**
+- [x] QR create modal and new QR page share a common form component
+- [x] Destination URL validation extracted to helper with unit tests
+- [x] Existing QR create modal inline error test still passes
+
+**Files:**
+- Create: `components/qr/qr-create-form.tsx` — shared create form UI
+- Create: `lib/qr-validation.ts` — QR create validation helpers
+- Modify: `components/qr-create-modal.tsx` — use shared form component
+- Modify: `app/(dashboard)/qr/new/page.tsx` — use shared form component
+- Create: `tests/lib/qr-validation.test.ts` — validation unit tests
+
+**Depends On:** Task 5.4.A
+
+**Spec Reference:** Core User Experience - Dynamic QR Code
+
+---
+
+#### Task 5.4.C: Reduce Auth/Billing Complexity
+
+**What:** Extract signup validation and billing helpers to reduce component complexity.
+
+**Acceptance Criteria:**
+- [x] Signup validation extracted to helper with unit tests
+- [x] Billing client uses extracted helpers for plan pricing or formatting
+- [x] Component complexity reduced (no eslint complexity > 10 for signup/billing)
+
+**Files:**
+- Create: `lib/auth-validation.ts` — signup validation helpers
+- Create: `tests/lib/auth-validation.test.ts` — validation unit tests
+- Modify: `app/(auth)/signup/page.tsx` — use validation helper
+- Modify: `app/(dashboard)/billing/billing-client.tsx` — use extracted helper(s)
+- Create: `lib/billing.ts` — billing helper utilities
+- Create: `tests/lib/billing.test.ts` — billing helper unit tests
+
+**Depends On:** Task 5.4.B
+
+**Spec Reference:** Authentication, Billing
+
+---
+
 ### Phase 5 Checkpoint
 
 **Automated:**
