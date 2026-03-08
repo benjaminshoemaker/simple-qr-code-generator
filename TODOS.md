@@ -13,6 +13,8 @@ Items discovered during development that need attention.
 ## Improvements
 
 - [ ] **Investigate URL protocol requirement** — Check if destination URLs require `http://` or `https://` prefix, or if the app should auto-prepend it when missing.
+- [ ] **[P1 / Medium]** Audit and improve the landing page
+- [ ] **[P1 / Medium]** Audit the readability of text throughout the app
 
 ---
 
